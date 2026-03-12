@@ -1,0 +1,30 @@
+{
+  "readme": "To open this file inside VSCode, you need to install VSCode extension \"Kanban atom8n\"",
+  "columns": [
+    {
+      "id": "col_2hu4gu_mmmi8mr7",
+      "title": "To Do",
+      "order": 0,
+      "boardId": "",
+      "tasks": []
+    },
+    {
+      "id": "col_leq20v_mmmi8mr7",
+      "title": "In Progress",
+      "order": 1,
+      "boardId": "",
+      "tasks": []
+    },
+    {
+      "id": "col_dg8m6z_mmmi8mr7",
+      "title": "Done",
+      "order": 2,
+      "boardId": "",
+      "tasks": []
+    }
+  ],
+  "settings": {
+    "askAgentPrompt": "Dig deeper to the code to implement the task id {id} in path {path}",
+    "askAgentColumnPrompt": "Dig deeper to the code to implement all tasks in column '{column}' with {taskCount} tasks in path {path}"
+  }
+}

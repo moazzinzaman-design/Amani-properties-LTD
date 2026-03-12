@@ -1,0 +1,15 @@
+{
+  "/api/openclaw/agent/route": "app/api/openclaw/agent/route.js",
+  "/api/openclaw/agents/route": "app/api/openclaw/agents/route.js",
+  "/api/openclaw/message/route": "app/api/openclaw/message/route.js",
+  "/api/openclaw/orchestrator/route": "app/api/openclaw/orchestrator/route.js",
+  "/api/openclaw/health/route": "app/api/openclaw/health/route.js",
+  "/api/projects/all/route": "app/api/projects/all/route.js",
+  "/api/stripe/checkout/route": "app/api/stripe/checkout/route.js",
+  "/api/stripe/webhook/route": "app/api/stripe/webhook/route.js",
+  "/api/projects/route": "app/api/projects/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/projects/action/route": "app/api/projects/action/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js"
+}

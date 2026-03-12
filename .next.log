@@ -1,0 +1,2309 @@
+
+> mission-control@1.0.0 dev
+> next dev
+
+   ▲ Next.js 15.1.0
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.138:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 13.9s
+ ○ Compiling / ...
+ ✓ Compiled / in 55.4s (1561 modules)
+ GET / 200 in 13883ms
+ POST / 200 in 1314ms
+ POST / 200 in 216ms
+ POST / 200 in 275ms
+ POST / 200 in 201ms
+ POST / 200 in 226ms
+ POST / 200 in 230ms
+ POST / 200 in 295ms
+ POST / 200 in 247ms
+ ○ Compiling /api/openclaw/orchestrator ...
+ ✓ Compiled /api/openclaw/orchestrator in 4.5s (1576 modules)
+ GET /api/openclaw/orchestrator 200 in 5323ms
+ GET / 200 in 908ms
+ POST / 200 in 1267ms
+ POST / 200 in 330ms
+ POST / 200 in 434ms
+ POST / 200 in 368ms
+ POST / 200 in 1177ms
+ POST / 200 in 441ms
+ POST / 200 in 234ms
+ POST / 200 in 230ms
+ POST / 200 in 232ms
+ POST / 200 in 213ms
+ POST / 200 in 181ms
+ POST / 200 in 202ms
+ POST / 200 in 215ms
+ POST / 200 in 252ms
+ POST / 200 in 311ms
+ POST / 200 in 228ms
+ POST / 200 in 1171ms
+ POST / 200 in 485ms
+ POST / 200 in 1723ms
+ POST / 200 in 451ms
+ POST / 200 in 1110ms
+ POST / 200 in 354ms
+ POST / 200 in 283ms
+ POST / 200 in 212ms
+ POST / 200 in 231ms
+ POST / 200 in 196ms
+ POST / 200 in 183ms
+ POST / 200 in 279ms
+ POST / 200 in 212ms
+ POST / 200 in 450ms
+ POST / 200 in 237ms
+ POST / 200 in 299ms
+ POST / 200 in 276ms
+ POST / 200 in 257ms
+ POST / 200 in 237ms
+ POST / 200 in 289ms
+ POST / 200 in 284ms
+ POST / 200 in 416ms
+ POST / 200 in 205ms
+ POST / 200 in 253ms
+ POST / 200 in 294ms
+ POST / 200 in 220ms
+ POST / 200 in 282ms
+ POST / 200 in 254ms
+ POST / 200 in 271ms
+ POST / 200 in 287ms
+ POST / 200 in 240ms
+ POST / 200 in 279ms
+ POST / 200 in 244ms
+ POST / 200 in 325ms
+ POST / 200 in 329ms
+ POST / 200 in 226ms
+ POST / 200 in 269ms
+ POST / 200 in 265ms
+ POST / 200 in 322ms
+ POST / 200 in 448ms
+ POST / 200 in 420ms
+ POST / 200 in 1242ms
+ POST / 200 in 667ms
+ POST / 200 in 294ms
+ ○ Compiling /api/openclaw/health ...
+ ✓ Compiled /api/openclaw/health in 13.9s (1562 modules)
+[HealthAPI] Checking port 18789...
+[HealthAPI] Port 18789 is OPEN
+ GET /api/openclaw/health 200 in 15299ms
+ POST / 200 in 14899ms
+ ○ Compiling /api/openclaw/orchestrator ...
+ ✓ Compiled /api/openclaw/orchestrator in 2.8s (838 modules)
+ GET /api/openclaw/orchestrator 200 in 8467ms
+ POST / 200 in 10524ms
+ POST / 200 in 304ms
+ POST / 200 in 411ms
+ POST / 200 in 304ms
+ POST / 200 in 309ms
+ POST / 200 in 229ms
+ POST / 200 in 574ms
+ POST / 200 in 322ms
+ POST / 200 in 365ms
+ POST / 200 in 388ms
+ POST / 200 in 253ms
+ POST / 200 in 290ms
+ POST / 200 in 227ms
+ POST / 200 in 324ms
+ POST / 200 in 448ms
+ POST / 200 in 261ms
+ POST / 200 in 237ms
+ POST / 200 in 277ms
+[HealthAPI] Checking port 18789...
+[HealthAPI] Port 18789 is OPEN
+ GET /api/openclaw/health 200 in 26ms
+ GET /api/openclaw/orchestrator 200 in 30ms
+ POST / 200 in 302ms
+ POST / 200 in 229ms
+ POST / 200 in 270ms
+ POST / 200 in 315ms
+ ✓ Compiled in 14.5s (1578 modules)
+ POST / 200 in 15683ms
+ GET / 200 in 731ms
+ POST / 200 in 305ms
+ GET / 200 in 36ms
+ POST / 200 in 241ms
+ POST / 200 in 187ms
+ POST / 200 in 237ms
+ GET / 200 in 39ms
+ POST / 200 in 267ms
+ POST / 200 in 302ms
+ POST / 200 in 328ms
+ POST / 200 in 218ms
+ POST / 200 in 266ms
+ POST / 200 in 231ms
+ POST / 200 in 288ms
+ POST / 200 in 291ms
+ POST / 200 in 258ms
+ POST / 200 in 225ms
+[HealthAPI] Checking port 18789...
+[HealthAPI] Port 18789 is OPEN
+ GET /api/openclaw/health 200 in 366ms
+ POST / 200 in 477ms
+ GET /api/openclaw/orchestrator 200 in 30ms
+ POST / 200 in 252ms
+ POST / 200 in 289ms
+ POST / 200 in 293ms
+ POST / 200 in 539ms
+ POST / 200 in 291ms
+ POST / 200 in 500ms
+ POST / 200 in 214ms
+ POST / 200 in 211ms
+ POST / 200 in 1003ms
+ POST / 200 in 1274ms
+ POST / 200 in 346ms
+ POST / 200 in 226ms
+ ✓ Compiled in 19.9s (1580 modules)
+[HealthAPI] Checking port 18789...
+[HealthAPI] Port 18789 is OPEN
+ GET /api/openclaw/health 200 in 1028ms
+ POST / 200 in 25273ms
+ POST / 200 in 612ms
+ POST / 200 in 838ms
+ POST / 200 in 878ms
+ POST / 200 in 408ms
+ POST / 200 in 1418ms
+ POST / 200 in 296ms
+ GET / 200 in 831ms
+ POST / 200 in 813ms
+ POST / 200 in 352ms
+ POST / 200 in 578ms
+ POST / 200 in 1069ms
+ POST / 200 in 406ms
+ GET /api/openclaw/orchestrator 200 in 24ms
+ POST / 200 in 442ms
+ POST / 200 in 246ms
+ POST / 200 in 200ms
+ POST / 200 in 282ms
+ POST / 200 in 253ms
+ POST / 200 in 482ms
+ POST / 200 in 230ms
+ POST / 200 in 353ms
+ POST / 200 in 371ms
+ POST / 200 in 241ms
+ POST / 200 in 288ms
+ POST / 200 in 265ms
+ POST / 200 in 255ms
+ POST / 200 in 251ms
+ ○ Compiling /api/openclaw/health ...
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:492:1]
+ [2m489[0m |   ];
+ [2m490[0m | 
+ [2m491[0m |   return (
+ [2m492[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m493[0m |       {/* ── Background Elements ── */}
+ [2m494[0m |       <div className="scanline" />
+ [2m495[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:492:1]
+ [2m489[0m |   ];
+ [2m490[0m | 
+ [2m491[0m |   return (
+ [2m492[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m493[0m |       {/* ── Background Elements ── */}
+ [2m494[0m |       <div className="scanline" />
+ [2m495[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ POST / 500 in 75936ms
+ GET /api/openclaw/health 500 in 67661ms
+ POST / 500 in 279ms
+ POST / 500 in 139ms
+ POST / 500 in 290ms
+ POST / 500 in 35ms
+ POST / 500 in 26ms
+ POST / 500 in 27ms
+ POST / 500 in 236ms
+ POST / 500 in 30ms
+ POST / 500 in 22ms
+ POST / 500 in 497ms
+ GET / 500 in 37ms
+ POST / 500 in 311ms
+ POST / 500 in 92ms
+ POST / 500 in 215ms
+ POST / 500 in 44ms
+ POST / 500 in 174ms
+ POST / 500 in 24ms
+ POST / 500 in 249ms
+ POST / 500 in 40ms
+ POST / 500 in 171ms
+ POST / 500 in 68ms
+ POST / 500 in 357ms
+ POST / 500 in 217ms
+ POST / 500 in 37ms
+ GET / 500 in 261ms
+ GET / 500 in 31ms
+ POST / 500 in 24ms
+ POST / 500 in 31ms
+ POST / 500 in 25ms
+ GET / 500 in 179ms
+ POST / 500 in 234ms
+ POST / 500 in 49ms
+ POST / 500 in 285ms
+ GET / 500 in 29ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/moazzinzaman/mission-control/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/Users/moazzinzaman/mission-control/.next/cache/webpack/client-development-fallback/0.pack.gz'
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:492:1]
+ [2m489[0m |   ];
+ [2m490[0m | 
+ [2m491[0m |   return (
+ [2m492[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m493[0m |       {/* ── Background Elements ── */}
+ [2m494[0m |       <div className="scanline" />
+ [2m495[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ GET /api/openclaw/orchestrator 500 in 633ms
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:492:1]
+ [2m489[0m |   ];
+ [2m490[0m | 
+ [2m491[0m |   return (
+ [2m492[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m493[0m |       {/* ── Background Elements ── */}
+ [2m494[0m |       <div className="scanline" />
+ [2m495[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ GET /_next/static/webpack/a9fd066f83ebbc73.webpack.hot-update.json 500 in 1694ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 500 in 20ms
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:492:1]
+ [2m489[0m |   ];
+ [2m490[0m | 
+ [2m491[0m |   return (
+ [2m492[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m493[0m |       {/* ── Background Elements ── */}
+ [2m494[0m |       <div className="scanline" />
+ [2m495[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ GET /_next/static/webpack/a9fd066f83ebbc73.webpack.hot-update.json 500 in 7197ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 500 in 59ms
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:492:1]
+ [2m489[0m |   ];
+ [2m490[0m | 
+ [2m491[0m |   return (
+ [2m492[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m493[0m |       {/* ── Background Elements ── */}
+ [2m494[0m |       <div className="scanline" />
+ [2m495[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:492:1]
+ [2m489[0m |   ];
+ [2m490[0m | 
+ [2m491[0m |   return (
+ [2m492[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m493[0m |       {/* ── Background Elements ── */}
+ [2m494[0m |       <div className="scanline" />
+ [2m495[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ GET /_next/static/webpack/a9fd066f83ebbc73.webpack.hot-update.json 500 in 3200ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /api/openclaw/health 500 in 3314ms
+ GET / 500 in 382ms
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:492:1]
+ [2m489[0m |   ];
+ [2m490[0m | 
+ [2m491[0m |   return (
+ [2m492[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m493[0m |       {/* ── Background Elements ── */}
+ [2m494[0m |       <div className="scanline" />
+ [2m495[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:492:1]
+ [2m489[0m |   ];
+ [2m490[0m | 
+ [2m491[0m |   return (
+ [2m492[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m493[0m |       {/* ── Background Elements ── */}
+ [2m494[0m |       <div className="scanline" />
+ [2m495[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ GET /_next/static/webpack/a9fd066f83ebbc73.webpack.hot-update.json 500 in 1388ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /api/openclaw/orchestrator 500 in 1460ms
+ GET / 500 in 28ms
+ ✓ Compiled /api/openclaw/health in 58.3s (1821 modules)
+ ✓ Compiled in 1ms (883 modules)
+ ✓ Compiled in 1ms (883 modules)
+ ✓ Compiled in 2ms (883 modules)
+[HealthAPI] Checking port 18789...
+[HealthAPI] Port 18789 is OPEN
+ GET /api/openclaw/health 200 in 28665ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 200 in 8488ms
+ GET /_next/static/webpack/a9fd066f83ebbc73.webpack.hot-update.json 404 in 67134ms
+ ○ Compiling /api/openclaw/orchestrator ...
+ GET / 200 in 8008ms
+ ✓ Compiled /api/openclaw/orchestrator in 2.7s (885 modules)
+ GET /api/openclaw/orchestrator 200 in 3119ms
+ POST / 200 in 2238ms
+ POST / 200 in 988ms
+ POST / 200 in 1654ms
+ POST / 200 in 235ms
+[HealthAPI] Checking port 18789...
+[HealthAPI] Port 18789 is OPEN
+ GET /api/openclaw/health 200 in 23ms
+ POST / 200 in 235ms
+ POST / 200 in 211ms
+ GET /api/openclaw/orchestrator 200 in 42ms
+ POST / 200 in 941ms
+ ○ Compiling /api/projects ...
+ ✓ Compiled /api/projects in 8.1s (1811 modules)
+ POST /api/projects 200 in 10020ms
+ POST /api/projects 200 in 1263ms
+ POST /api/projects 200 in 274ms
+ POST /api/projects 200 in 374ms
+ GET /api/openclaw/orchestrator 200 in 143ms
+[HealthAPI] Checking port 18789...
+[HealthAPI] Port 18789 is OPEN
+ GET /api/openclaw/health 200 in 31ms
+ GET /api/openclaw/orchestrator 200 in 24ms
+ POST /api/openclaw/orchestrator 200 in 41ms
+ GET /api/openclaw/orchestrator 200 in 35ms
+[HealthAPI] Checking port 18789...
+[HealthAPI] Port 18789 is OPEN
+ GET /api/openclaw/health 200 in 78ms
+ GET /api/openclaw/orchestrator 200 in 19ms
+ GET /api/openclaw/orchestrator 200 in 16ms
+ GET /api/openclaw/orchestrator 200 in 12ms
+ GET /api/openclaw/orchestrator 200 in 20ms
+ GET /api/openclaw/orchestrator 200 in 34ms
+ GET /api/openclaw/orchestrator 200 in 37ms
+ GET /api/openclaw/orchestrator 200 in 32ms
+ GET /api/openclaw/orchestrator 200 in 18ms
+ POST /api/projects 200 in 1735ms
+ POST / 200 in 5313ms
+ POST / 200 in 1371ms
+ POST / 200 in 242ms
+ POST / 200 in 693ms
+ POST / 200 in 168ms
+ POST / 200 in 383ms
+ POST / 200 in 238ms
+ POST / 200 in 311ms
+ POST / 200 in 373ms
+ POST / 200 in 1330ms
+ POST / 200 in 356ms
+ POST / 200 in 812ms
+ POST / 200 in 185ms
+ POST / 200 in 417ms
+ POST / 200 in 740ms
+ POST / 200 in 600ms
+ POST / 200 in 1276ms
+ POST / 200 in 324ms
+ POST / 200 in 793ms
+ POST / 200 in 463ms
+ POST / 200 in 284ms
+ POST / 200 in 735ms
+ POST / 200 in 477ms
+ POST / 200 in 334ms
+ POST / 200 in 263ms
+ POST / 200 in 265ms
+ POST / 200 in 283ms
+ POST / 200 in 352ms
+ POST / 200 in 384ms
+ POST / 200 in 746ms
+ POST / 200 in 218ms
+ POST / 200 in 501ms
+ POST / 200 in 946ms
+ POST / 200 in 970ms
+ POST / 200 in 599ms
+ POST / 200 in 439ms
+ POST / 200 in 813ms
+ POST / 200 in 308ms
+ POST / 200 in 511ms
+ POST / 200 in 410ms
+ POST / 200 in 254ms
+ POST / 200 in 886ms
+ POST / 200 in 384ms
+ POST / 200 in 160ms
+ POST / 200 in 1533ms
+ POST / 200 in 282ms
+ POST / 200 in 167ms
+ POST / 200 in 729ms
+ POST / 200 in 798ms
+ POST / 200 in 291ms
+ POST / 200 in 272ms
+ POST / 200 in 551ms
+ POST / 200 in 449ms
+ POST / 200 in 264ms
+ POST / 200 in 317ms
+ POST / 200 in 2615ms
+ POST / 200 in 555ms
+ POST / 200 in 259ms
+ POST / 200 in 832ms
+ POST / 200 in 666ms
+ POST / 200 in 598ms
+ POST / 200 in 790ms
+ POST / 200 in 472ms
+ POST / 200 in 269ms
+ POST / 200 in 605ms
+ POST / 200 in 395ms
+ POST / 200 in 808ms
+ POST / 200 in 596ms
+ POST / 200 in 405ms
+ POST / 200 in 301ms
+ POST / 200 in 1096ms
+ POST / 200 in 3656ms
+ POST / 200 in 388ms
+ POST / 200 in 2393ms
+ POST / 200 in 5056ms
+ POST / 200 in 1599ms
+ POST / 200 in 301ms
+ POST / 200 in 3404ms
+ POST / 200 in 3566ms
+ POST / 200 in 1477ms
+ POST / 200 in 448ms
+ POST / 200 in 736ms
+ POST / 200 in 7243ms
+ POST / 200 in 908ms
+ POST / 200 in 1249ms
+ POST / 200 in 604ms
+ POST / 200 in 1455ms
+ POST / 200 in 379ms
+ POST / 200 in 726ms
+ POST / 200 in 466ms
+ POST / 200 in 838ms
+ POST / 200 in 4640ms
+ POST / 200 in 617ms
+ POST / 200 in 750ms
+ POST / 200 in 2581ms
+ POST / 200 in 504ms
+ POST / 200 in 1534ms
+ POST / 200 in 435ms
+ POST / 200 in 2299ms
+ POST / 200 in 1555ms
+ POST / 200 in 1282ms
+ POST / 200 in 1407ms
+ POST / 200 in 2596ms
+ POST / 200 in 2534ms
+ POST / 200 in 3248ms
+ POST / 200 in 1095ms
+ POST / 200 in 6253ms
+ POST / 200 in 6936ms
+ POST / 200 in 6259ms
+ POST / 200 in 1771ms
+ POST /api/projects 200 in 3407ms
+ POST / 200 in 4731ms
+ POST / 200 in 2010ms
+ POST / 200 in 1099ms
+ POST /api/projects 200 in 3803ms
+ POST / 200 in 1777ms
+ GET /api/openclaw/orchestrator 200 in 431ms
+ POST /api/projects 200 in 6120ms
+ POST / 200 in 17690ms
+ POST / 200 in 1228ms
+ POST / 200 in 4710ms
+ POST / 200 in 4654ms
+ POST / 200 in 6390ms
+ POST / 200 in 1404ms
+ POST / 200 in 2725ms
+ POST / 200 in 5383ms
+ POST / 200 in 2666ms
+ POST / 200 in 2807ms
+ POST / 200 in 3126ms
+ POST / 200 in 2025ms
+ POST / 200 in 6182ms
+ POST / 200 in 3325ms
+ POST / 200 in 1607ms
+ POST / 200 in 1080ms
+ POST / 200 in 2332ms
+ POST / 200 in 4245ms
+ POST / 200 in 6621ms
+ POST / 200 in 1361ms
+ POST / 200 in 21891ms
+ POST / 200 in 2784ms
+ POST / 200 in 17316ms
+ POST / 200 in 2840ms
+ POST / 200 in 2019ms
+ POST / 200 in 1463ms
+ POST / 200 in 3450ms
+ POST / 200 in 1073ms
+ POST / 200 in 2816ms
+ POST / 200 in 2049ms
+ POST / 200 in 2183ms
+ POST / 200 in 1895ms
+ POST / 200 in 2022ms
+ POST / 200 in 1995ms
+ POST / 200 in 2851ms
+ POST / 200 in 2649ms
+ POST / 200 in 3609ms
+ POST / 200 in 2477ms
+ POST / 200 in 2865ms
+ POST / 200 in 931ms
+ POST / 200 in 2012ms
+ POST / 200 in 2887ms
+ POST / 200 in 4240ms
+ POST / 200 in 21009ms
+ POST / 200 in 72116ms
+ POST / 200 in 5443ms
+ POST / 200 in 518587ms
+ GET /api/openclaw/orchestrator 200 in 2473ms
+ POST / 200 in 10675ms
+ POST / 200 in 2693ms
+ POST / 200 in 2241ms
+ POST / 200 in 2043ms
+ POST / 200 in 1674ms
+ POST / 200 in 1162ms
+ POST / 200 in 2016ms
+ POST / 200 in 2887ms
+ POST / 200 in 2212ms
+ POST / 200 in 953ms
+ POST / 200 in 659ms
+ POST / 200 in 856ms
+ POST / 200 in 476ms
+ POST / 200 in 565ms
+ POST / 200 in 628ms
+ POST / 200 in 308ms
+ POST / 200 in 606ms
+ POST / 200 in 613ms
+ POST / 200 in 823ms
+ POST / 200 in 648ms
+ POST / 200 in 208ms
+ POST / 200 in 395ms
+ POST / 200 in 758ms
+ POST / 200 in 782ms
+ POST / 200 in 2309ms
+ POST / 200 in 806ms
+ POST / 200 in 367ms
+ POST / 200 in 859ms
+ POST / 200 in 331ms
+ POST / 200 in 353ms
+ POST / 200 in 359ms
+ POST / 200 in 374ms
+ POST / 200 in 250ms
+ POST / 200 in 930ms
+ POST / 200 in 301ms
+ POST / 200 in 321ms
+ POST / 200 in 279ms
+ POST / 200 in 434ms
+ POST / 200 in 254ms
+ POST / 200 in 903ms
+ POST / 200 in 647ms
+ POST / 200 in 381ms
+ POST / 200 in 2807ms
+ POST / 200 in 460ms
+ POST / 200 in 1004ms
+ POST / 200 in 5094ms
+ POST / 200 in 1157ms
+ POST / 200 in 360ms
+ POST / 200 in 491ms
+ POST / 200 in 532ms
+ POST / 200 in 437ms
+ POST / 200 in 784ms
+ POST / 200 in 414ms
+ POST / 200 in 663ms
+ POST / 200 in 729ms
+ POST / 200 in 1983ms
+ POST / 200 in 1005ms
+ POST / 200 in 757ms
+ POST / 200 in 299ms
+ POST / 200 in 215ms
+ POST / 200 in 524ms
+ POST / 200 in 252ms
+ POST / 200 in 471ms
+ POST / 200 in 278ms
+ POST / 200 in 656ms
+ POST / 200 in 776ms
+ POST / 200 in 429ms
+ POST / 200 in 322ms
+ POST / 200 in 815ms
+ POST / 200 in 376ms
+ POST / 200 in 499ms
+ POST / 200 in 831ms
+ POST / 200 in 1031ms
+ POST / 200 in 257ms
+ POST / 200 in 271ms
+ POST / 200 in 352ms
+ POST / 200 in 610ms
+ POST / 200 in 472ms
+ POST / 200 in 401ms
+ POST / 200 in 380ms
+ POST / 200 in 317ms
+ POST / 200 in 996ms
+ POST / 200 in 1565ms
+ POST / 200 in 511ms
+ POST / 200 in 427ms
+ POST / 200 in 431ms
+ POST / 200 in 518ms
+ POST / 200 in 288ms
+ POST / 200 in 531ms
+ POST / 200 in 516ms
+ POST / 200 in 616ms
+ POST / 200 in 351ms
+ POST / 200 in 463ms
+ POST / 200 in 629ms
+ POST / 200 in 499ms
+ POST / 200 in 383ms
+ POST / 200 in 377ms
+ POST / 200 in 447ms
+ POST / 200 in 340ms
+ POST / 200 in 533ms
+ POST / 200 in 243ms
+ POST / 200 in 273ms
+ POST / 200 in 298ms
+ POST / 200 in 269ms
+ POST / 200 in 369ms
+ POST / 200 in 341ms
+ POST / 200 in 405ms
+ POST / 200 in 618ms
+ POST / 200 in 285ms
+ POST / 200 in 481ms
+ POST / 200 in 343ms
+ POST / 200 in 351ms
+ POST / 200 in 231ms
+ POST / 200 in 517ms
+ POST / 200 in 599ms
+ POST / 200 in 401ms
+ POST / 200 in 360ms
+ POST / 200 in 346ms
+ POST / 200 in 268ms
+ POST / 200 in 361ms
+ POST / 200 in 387ms
+ POST / 200 in 422ms
+ POST / 200 in 423ms
+ POST / 200 in 309ms
+ POST / 200 in 340ms
+ POST / 200 in 327ms
+ POST / 200 in 381ms
+ POST / 200 in 261ms
+ POST / 200 in 316ms
+ POST / 200 in 300ms
+ POST / 200 in 243ms
+ POST / 200 in 272ms
+ POST / 200 in 358ms
+ POST / 200 in 276ms
+ POST / 200 in 291ms
+ POST / 200 in 252ms
+ POST / 200 in 253ms
+ POST / 200 in 275ms
+ POST / 200 in 227ms
+ POST / 200 in 335ms
+ POST / 200 in 345ms
+ POST / 200 in 282ms
+ POST / 200 in 239ms
+ POST / 200 in 353ms
+ POST / 200 in 368ms
+ POST / 200 in 251ms
+ POST / 200 in 314ms
+ POST / 200 in 273ms
+ POST / 200 in 259ms
+ POST / 200 in 272ms
+ POST / 200 in 280ms
+ POST / 200 in 265ms
+ POST / 200 in 282ms
+ POST / 200 in 270ms
+ POST / 200 in 763ms
+ POST / 200 in 456ms
+ POST / 200 in 407ms
+ POST / 200 in 432ms
+ POST / 200 in 280ms
+ POST / 200 in 383ms
+ POST / 200 in 548ms
+ POST / 200 in 482ms
+ POST / 200 in 504ms
+ POST / 200 in 419ms
+ POST / 200 in 272ms
+ POST / 200 in 245ms
+ POST / 200 in 417ms
+ POST / 200 in 437ms
+ POST / 200 in 593ms
+ POST / 200 in 582ms
+ POST / 200 in 366ms
+ POST / 200 in 305ms
+ POST / 200 in 387ms
+ POST / 200 in 348ms
+ POST / 200 in 301ms
+ POST / 200 in 805ms
+ POST / 200 in 243ms
+ POST / 200 in 311ms
+ POST / 200 in 395ms
+ POST / 200 in 875ms
+ POST / 200 in 625ms
+ POST / 200 in 551ms
+ POST / 200 in 629ms
+ POST / 200 in 222ms
+ POST / 200 in 358ms
+ POST / 200 in 739ms
+ POST / 200 in 1118ms
+ POST / 200 in 337ms
+ POST / 200 in 226ms
+ POST / 200 in 217ms
+ POST / 200 in 214ms
+ POST / 200 in 397ms
+ POST / 200 in 277ms
+ POST / 200 in 463ms
+ POST / 200 in 447ms
+ POST / 200 in 253ms
+ POST / 200 in 462ms
+ POST / 200 in 273ms
+ POST / 200 in 407ms
+ POST / 200 in 191ms
+ POST / 200 in 265ms
+ POST / 200 in 414ms
+ POST / 200 in 378ms
+ POST / 200 in 243ms
+ POST / 200 in 251ms
+ POST / 200 in 225ms
+ POST / 200 in 411ms
+ POST / 200 in 276ms
+ POST / 200 in 371ms
+ POST / 200 in 368ms
+ POST / 200 in 215ms
+ POST / 200 in 190ms
+ POST / 200 in 228ms
+ POST / 200 in 176ms
+ POST / 200 in 229ms
+ POST / 200 in 236ms
+ POST / 200 in 250ms
+ POST / 200 in 202ms
+ POST / 200 in 216ms
+ POST / 200 in 437ms
+ POST / 200 in 348ms
+ POST / 200 in 254ms
+ POST / 200 in 296ms
+ POST / 200 in 219ms
+ POST / 200 in 213ms
+ GET /api/openclaw/orchestrator 200 in 15ms
+ GET /api/openclaw/orchestrator 200 in 20ms
+ GET /api/openclaw/orchestrator 200 in 18ms
+ GET /api/openclaw/orchestrator 200 in 13ms
+ GET /api/openclaw/orchestrator 200 in 9ms
+ GET /api/openclaw/orchestrator 200 in 29ms
+ GET /api/openclaw/orchestrator 200 in 23ms
+ GET /api/openclaw/orchestrator 200 in 45ms
+ GET /api/openclaw/orchestrator 200 in 23ms
+ GET /api/openclaw/orchestrator 200 in 15ms
+ GET /api/openclaw/orchestrator 200 in 15ms
+ GET /api/openclaw/orchestrator 200 in 24ms
+ POST /api/projects 200 in 598ms
+ POST /api/projects 200 in 465ms
+ POST /api/projects 200 in 295ms
+ POST /api/projects 200 in 364ms
+ POST /api/projects 200 in 580ms
+ POST /api/projects 200 in 814ms
+ POST /api/projects 200 in 456ms
+ POST /api/projects 200 in 632ms
+ POST /api/projects 200 in 1048ms
+ POST / 200 in 266ms
+ POST / 200 in 263ms
+ POST / 200 in 366ms
+ POST / 200 in 309ms
+ POST / 200 in 472ms
+ POST / 200 in 342ms
+ POST / 200 in 759ms
+ POST / 200 in 560ms
+ POST / 200 in 352ms
+ POST /api/projects 200 in 365ms
+ POST / 200 in 270ms
+ POST / 200 in 163ms
+ POST / 200 in 211ms
+ POST / 200 in 185ms
+ POST / 200 in 220ms
+ GET /api/openclaw/orchestrator 200 in 17ms
+ GET /api/openclaw/orchestrator 200 in 19ms
+ POST / 200 in 291ms
+ POST / 200 in 320ms
+ POST / 200 in 392ms
+ POST / 200 in 447ms
+ POST / 200 in 316ms
+ POST / 200 in 224ms
+ POST / 200 in 242ms
+ POST / 200 in 385ms
+ POST / 200 in 434ms
+ POST / 200 in 325ms
+ POST / 200 in 300ms
+ POST / 200 in 332ms
+ POST / 200 in 310ms
+ POST / 200 in 631ms
+ POST / 200 in 622ms
+ POST / 200 in 336ms
+ POST / 200 in 306ms
+ POST / 200 in 225ms
+ POST / 200 in 437ms
+ POST / 200 in 226ms
+ ○ Compiling /api/openclaw/agent ...
+ POST / 200 in 11527ms
+ ✓ Compiled /api/openclaw/agent in 25s (1806 modules)
+ POST / 200 in 14642ms
+ POST / 200 in 312ms
+ POST / 200 in 194ms
+ POST / 200 in 315ms
+ POST / 200 in 259ms
+ POST / 200 in 205ms
+ POST / 200 in 209ms
+ POST / 200 in 351ms
+ POST / 200 in 216ms
+ POST / 200 in 171ms
+ POST / 200 in 319ms
+ POST / 200 in 235ms
+ POST / 200 in 278ms
+ POST / 200 in 244ms
+ POST / 200 in 637ms
+ ○ Compiling /api/openclaw/orchestrator ...
+ ✓ Compiled /api/openclaw/orchestrator in 1708ms (884 modules)
+ GET /api/openclaw/orchestrator 200 in 2024ms
+ ○ Compiling /api/projects ...
+ ✓ Compiled /api/projects in 1283ms (886 modules)
+ GET /api/openclaw/orchestrator 200 in 12ms
+ POST /api/projects 200 in 2369ms
+ POST /api/openclaw/agent 500 in 66111ms
+ GET /api/openclaw/orchestrator 200 in 3492ms
+ ○ Compiling /api/openclaw/health ...
+ ✓ Compiled /api/openclaw/health in 8.9s (886 modules)
+[HealthAPI] Checking port 18789...
+[HealthAPI] Port 18789 is OPEN
+ GET /api/openclaw/health 200 in 9267ms
+ GET /api/openclaw/orchestrator 200 in 139ms
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:539:1]
+ [2m536[0m |   ];
+ [2m537[0m | 
+ [2m538[0m |   return (
+ [2m539[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m540[0m |       {/* ── Background Elements ── */}
+ [2m541[0m |       <div className="scanline" />
+ [2m542[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:539:1]
+ [2m536[0m |   ];
+ [2m537[0m | 
+ [2m538[0m |   return (
+ [2m539[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m540[0m |       {/* ── Background Elements ── */}
+ [2m541[0m |       <div className="scanline" />
+ [2m542[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:539:1]
+ [2m536[0m |   ];
+ [2m537[0m | 
+ [2m538[0m |   return (
+ [2m539[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m540[0m |       {/* ── Background Elements ── */}
+ [2m541[0m |       <div className="scanline" />
+ [2m542[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:539:1]
+ [2m536[0m |   ];
+ [2m537[0m | 
+ [2m538[0m |   return (
+ [2m539[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m540[0m |       {/* ── Background Elements ── */}
+ [2m541[0m |       <div className="scanline" />
+ [2m542[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/Users/moazzinzaman/mission-control/src/app/page.tsx[0m:539:1]
+ [2m536[0m |   ];
+ [2m537[0m | 
+ [2m538[0m |   return (
+ [2m539[0m |     <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden selection:bg-indigo-500/30">
+     : [35;1m     ^^^[0m
+ [2m540[0m |       {/* ── Background Elements ── */}
+ [2m541[0m |       <div className="scanline" />
+ [2m542[0m |       <div className="stardust-layer" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ POST /api/openclaw/orchestrator 500 in 16266ms
+ GET /api/openclaw/health 500 in 13508ms
+ GET / 500 in 10891ms
+ GET /api/openclaw/orchestrator 500 in 221ms
+ GET /api/openclaw/health 500 in 45ms
+ GET / 500 in 98ms
+ GET /api/openclaw/health 500 in 102ms
+ GET / 500 in 22ms
+ GET /api/openclaw/health 500 in 546ms
+ GET /api/openclaw/health 500 in 38ms
+ GET /api/openclaw/health 500 in 1325ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 14.9s (1806 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /_next/static/webpack/a9fd066f83ebbc73.webpack.hot-update.json 404 in 14673ms
+ GET / 200 in 1375ms
+ GET / 200 in 227ms
+ ✓ Compiled in 2.1s (938 modules)
+ GET / 200 in 75ms
+ GET / 404 in 243ms
+ GET / 404 in 263ms
+ GET / 404 in 273ms
+ GET / 404 in 221ms
+ GET / 404 in 260ms
+ GET / 404 in 238ms
+ GET / 404 in 238ms
+ GET / 404 in 246ms
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'entryCSSFiles')]
+ GET / 500 in 1984ms
+ GET / 200 in 131ms
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'entryCSSFiles')]
+ GET / 200 in 2262ms
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'entryCSSFiles')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'entryCSSFiles')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'entryCSSFiles')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'entryCSSFiles')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'entryCSSFiles')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'entryCSSFiles')]
+ GET /_next/static/css/app/layout.css?v=1773248671493 500 in 9801ms
+ GET /_next/static/chunks/webpack.js?v=1773248671493 500 in 9805ms
+ GET /_next/static/chunks/main-app.js?v=1773248671493 500 in 9799ms
+ GET /_next/static/chunks/app/page.js 500 in 7828ms
+ GET /_next/static/chunks/app/global-error.js 500 in 7813ms
+ GET /_next/static/chunks/app-pages-internals.js 500 in 7835ms
+ ✓ Compiled in 2.8s (938 modules)
+ ✓ Compiled in 2.3s (938 modules)
+ ✓ Compiled in 1488ms (938 modules)
+ ✓ Compiled in 2.1s (1805 modules)
+ ✓ Compiled in 1510ms (938 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1449ms (868 modules)
+ GET / 404 in 1503ms
+ GET / 404 in 20ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:57:59916)
+    at Object.<anonymous> (.next/server/app/page.js:57:59961) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './627.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:376) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 482ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:57:59916)
+    at Object.<anonymous> (.next/server/app/page.js:57:59961) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './627.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:376) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 321ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:57:59916)
+    at Object.<anonymous> (.next/server/app/page.js:57:59961) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './627.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:376) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 163ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:57:59916)
+    at Object.<anonymous> (.next/server/app/page.js:57:59961) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './627.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:376) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 109ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:57:59916)
+    at Object.<anonymous> (.next/server/app/page.js:57:59961) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './627.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:376) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 166ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:57:59916)
+    at Object.<anonymous> (.next/server/app/page.js:57:59961) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './627.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:376) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 524ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:57:59916)
+    at Object.<anonymous> (.next/server/app/page.js:57:59961) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './627.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:376) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 177ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:57:59916)
+    at Object.<anonymous> (.next/server/app/page.js:57:59961) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './627.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:376) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 167ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:57:59916)
+    at Object.<anonymous> (.next/server/app/page.js:57:59961) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './627.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:376) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 583ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /_next/static/chunks/fallback/webpack.js 500 in 703ms
+ GET /_next/static/chunks/fallback/main.js 500 in 701ms
+ GET /_next/static/chunks/fallback/react-refresh.js 500 in 685ms
+ GET /_next/static/chunks/fallback/pages/_app.js 500 in 685ms
+ GET /_next/static/chunks/fallback/pages/_error.js 500 in 684ms
+ ✓ Compiled in 3.2s (1806 modules)
+ ✓ Compiled in 7.3s (1805 modules)
+ ✓ Compiled in 1646ms (938 modules)
+ ⨯ TypeError: e[o] is not a function
+    at Object.t [as require] (.next/server/webpack-runtime.js:1:127)
+    at JSON.parse (<anonymous>) {
+  digest: '3706193795'
+}
+TypeError: e[o] is not a function
+    at Object.t [as require] (.next/server/webpack-runtime.js:1:127)
+    at JSON.parse (<anonymous>)
+ ⨯ TypeError: e[o] is not a function
+    at Object.t [as require] (.next/server/webpack-runtime.js:1:127)
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ GET / 500 in 2286ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 915ms (868 modules)
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /_next/static/chunks/main.js 500 in 1415ms
+ GET /_next/static/chunks/react-refresh.js 500 in 1407ms
+ GET /_next/static/chunks/pages/_app.js 500 in 1408ms
+ GET /_next/static/chunks/pages/_error.js 500 in 1402ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:57:59916)
+    at Object.<anonymous> (.next/server/app/page.js:57:59961) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './627.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:376) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 414ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /_next/static/chunks/fallback/webpack.js 500 in 860ms
+ GET /_next/static/chunks/fallback/main.js 500 in 852ms
+ GET /_next/static/chunks/fallback/pages/_app.js 500 in 861ms
+ GET /_next/static/chunks/fallback/react-refresh.js 500 in 872ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /_next/static/chunks/fallback/pages/_error.js 500 in 1005ms
+ ✓ Compiled in 3.8s (938 modules)
+ ✓ Compiled in 8.7s (938 modules)
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:57:59916)
+    at Object.<anonymous> (.next/server/app/page.js:57:59961) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './627.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:376) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 467ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /_next/static/chunks/fallback/main.js 500 in 356ms
+ GET /_next/static/chunks/fallback/webpack.js 500 in 359ms
+ GET /_next/static/chunks/fallback/pages/_app.js 500 in 357ms
+ GET /_next/static/chunks/fallback/react-refresh.js 500 in 366ms
+ GET /_next/static/chunks/fallback/pages/_error.js 500 in 364ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:57:59916)
+    at Object.<anonymous> (.next/server/app/page.js:57:59961) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './627.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:376) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 72ms
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './638.js'
+Require stack:
+- /Users/moazzinzaman/mission-control/.next/server/webpack-runtime.js
+- /Users/moazzinzaman/mission-control/.next/server/app/_not-found/page.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/require.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/load-components.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/utils.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/options.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/swc/index.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/config.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/next.js
+- /Users/moazzinzaman/mission-control/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:5311)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:5355) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /_next/static/chunks/fallback/main.js 500 in 194ms
+ GET /_next/static/chunks/fallback/webpack.js 500 in 194ms
+ GET /_next/static/chunks/fallback/react-refresh.js 500 in 193ms
+ GET /_next/static/chunks/fallback/pages/_app.js 500 in 196ms
+ GET /_next/static/chunks/fallback/pages/_error.js 500 in 195ms
+   Reload env: .env.local
+ ✓ Compiled in 11.2s (1805 modules)
+   Reload env: .env.local
+ ✓ Compiled in 4.8s (1805 modules)
+ ✓ Compiled in 761ms (938 modules)
+ ✓ Compiled in 1835ms (1805 modules)
+ ✓ Compiled in 251ms (938 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/moazzinzaman/mission-control/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/Users/moazzinzaman/mission-control/.next/cache/webpack/client-development-fallback/0.pack.gz'
+ ✓ Compiled in 6.1s (1886 modules)
