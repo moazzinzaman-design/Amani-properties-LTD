@@ -6,7 +6,7 @@ import {
   Activity, BarChart3, Bell, CalendarDays, CheckCircle2, CheckSquare, Clock3, CircleDollarSign,
   Command, Copy, CreditCard, Cpu, Database, DollarSign, ExternalLink, FolderGit2, Github, Globe, Home, Landmark, Link2, Music2,
   Network, Pause, Play, Plus, RefreshCw, Rocket, Search, Send, Server, Settings,
-  ShieldCheck, Sparkles, StickyNote, Terminal, Trash2, TrendingUp, User,
+  ShieldCheck, StickyNote, Terminal, Trash2, TrendingUp, User,
   UserCircle2, Workflow, X,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -453,7 +453,7 @@ function TaskInput({ onAdd }: { onAdd: (t: string) => void }) {
 }
 
 /* ── Types ─────────────────────────────────────────────────────── */
-type Tab = "Home" | "Projects" | "Tasks" | "Analytics" | "Swarm" | "Deployments" | "Billing" | "Settings" | "Revenue" | "Bank" | "SEO Report";
+type Tab = "Home" | "Projects" | "Tasks" | "Analytics" | "Swarm" | "Deployments" | "Settings" | "Revenue" | "Bank" | "SEO Report";
 type LogLevel = "info" | "warn" | "error" | "success";
 type Todo = { id: number; text: string; done: boolean; col: "todo" | "doing" | "done" };
 type Toast = { id: number; msg: string; level: LogLevel };
@@ -476,7 +476,6 @@ type AppSettings = {
   commandAllowlist: string; commandDenylist: string;
   darkMode: boolean; compactMode: boolean; autoSaveNotes: boolean;
   autoSaveSeconds: number; pomodoroMinutes: number;
-  subscriptionTier: "free" | "pro" | "enterprise";
   projects: { id: string, name: string, path: string, category: 'website' | 'app' | 'extension' | 'software' }[];
 };
 
@@ -495,7 +494,7 @@ const defaults: AppSettings = {
   commandAllowlist: "npm run build\nnpm run dev\ngit status",
   commandDenylist: "rm -rf /\nsudo rm -rf /",
   darkMode: true, compactMode: false, autoSaveNotes: true, autoSaveSeconds: 10,
-  pomodoroMinutes: 25, subscriptionTier: "free",
+  pomodoroMinutes: 25,
   projects: [
     { id: "mission-control", name: "Mission Control", path: "/Users/moazzinzaman/mission-control", category: 'app' },
     { id: "pages-app", name: "Pages App", path: "/Users/moazzinzaman/pages-app", category: 'website' },
@@ -587,36 +586,6 @@ function Skeleton() {
   );
 }
 
-/* ── Pricing Card ── */
-function PricingCard({ name, price, features, current, highlight, onSelect }: {
-  name: string; price: string; features: string[]; current: boolean; highlight?: boolean; onSelect: () => void;
-}) {
-  return (
-    <div className={cx(
-      "rounded-2xl border p-6 transition-all duration-300",
-      highlight ? "border-indigo-400/40 bg-indigo-500/5 shadow-lg shadow-indigo-500/10 scale-[1.02]" : "border-white/10 bg-slate-900/40",
-      "hover:-translate-y-1"
-    )}>
-      {highlight && <div className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2 flex items-center gap-1"><Sparkles size={12} /> Most Popular</div>}
-      <h3 className="text-xl font-bold">{name}</h3>
-      <div className="mt-2 mb-4">
-        <span className="text-3xl font-extrabold font-mono">{price}</span>
-        {price !== "Free" && <span className="text-sm text-slate-400">/month</span>}
-      </div>
-      <ul className="space-y-2 mb-6 text-sm text-slate-300">
-        {features.map(f => <li key={f} className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-400 shrink-0" />{f}</li>)}
-      </ul>
-      <button onClick={onSelect} disabled={current}
-        className={cx("w-full rounded-lg py-2.5 text-sm font-semibold transition-all",
-          current ? "bg-slate-800 text-slate-500 cursor-default" :
-          highlight ? "bg-indigo-500 text-white hover:bg-indigo-400" :
-          "bg-slate-800 border border-white/10 hover:bg-slate-700 text-slate-200"
-        )}>
-        {current ? "Current Plan" : "Upgrade"}
-      </button>
-    </div>
-  );
-}
 
 /* ── Main ──────────────────────────────────────────────────────── */
 export default function Page() {
@@ -872,24 +841,6 @@ export default function Page() {
     setAgentRunning(false);
   }
 
-  async function handleCheckout(plan: "pro" | "enterprise") {
-    toast("Creating checkout session…", "info");
-    try {
-      const res = await fetch("/api/stripe/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan }),
-      });
-      const data = await res.json();
-      if (data.url) {
-        window.open(data.url, "_blank");
-      } else {
-        toast(data.message || data.error || "Checkout failed", "warn");
-      }
-    } catch {
-      toast("Failed to create checkout session", "error");
-    }
-  }
 
   function watchdogCheck() {
     const cpu = 60 + Math.floor(Math.random() * 40);
@@ -907,7 +858,6 @@ export default function Page() {
     { label: "Revenue", action: () => { setTab("Revenue"); setCmdkOpen(false); } },
     { label: "Bank", action: () => { setTab("Bank"); setCmdkOpen(false); } },
     { label: "Swarm", action: () => { setTab("Swarm"); setCmdkOpen(false); } },
-    { label: "Billing", action: () => { setTab("Billing"); setCmdkOpen(false); } },
     { label: "Settings", action: () => { setTab("Settings"); setCmdkOpen(false); } },
     { label: "Toggle Pomodoro", action: () => { setPomodoroRunning(v => !v); setCmdkOpen(false); } },
     { label: "Reset Pomodoro", action: () => { setPomodoroSeconds(settings.pomodoroMinutes * 60); setCmdkOpen(false); } },
@@ -933,7 +883,6 @@ export default function Page() {
     { label: "Revenue", icon: <CircleDollarSign size={16} /> },
     { label: "Bank", icon: <Landmark size={16} /> },
     { label: "SEO Report", icon: <Search size={16} /> },
-    { label: "Billing", icon: <CreditCard size={16} /> },
     { label: "Settings", icon: <Settings size={16} /> },
   ];
 
@@ -994,8 +943,7 @@ export default function Page() {
               <motion.button 
                 key={s.label} 
                 onClick={() => {
-                  if (s.label === "Billing") window.location.href = "/billing";
-                  else if (s.label === "SEO Report") window.location.href = "/seo";
+                  if (s.label === "SEO Report") window.location.href = "/seo";
                   else setTab(s.label);
                 }}
                 whileHover={{ x: 4, backgroundColor: "rgba(99,102,241,0.15)" }}
@@ -1017,7 +965,6 @@ export default function Page() {
               </div>
               <div className="space-y-1">
                 <p className="text-[10px] text-slate-400 flex justify-between"><span>MODE</span> <span className="text-white font-black">{settings.autonomyMode.toUpperCase()}</span></p>
-                <p className="text-[10px] text-slate-400 flex justify-between"><span>TIER</span> <span className="text-indigo-400 font-black">{settings.subscriptionTier.toUpperCase()}</span></p>
               </div>
             </div>
           </aside>
@@ -1107,7 +1054,7 @@ export default function Page() {
                     </div>
                     <div>
                       <p className="font-semibold flex items-center gap-2">Moazzin Zaman <PulseDot /></p>
-                      <p className="text-xs text-slate-400">Admin • <span className="capitalize">{settings.subscriptionTier}</span> Tier</p>
+                      <p className="text-xs text-slate-400">Admin</p>
                     </div>
                   </div>
                 </GlassCard>
@@ -2597,64 +2544,7 @@ export default function Page() {
               </section>
             )}
 
-            {/* ════════════ BILLING ════════════ */}
-            {tab === "Billing" && (
-              <section className="space-y-6">
-                <div className="text-center mb-4">
-                  <h2 className="text-2xl font-bold">Choose Your Plan</h2>
-                  <p className="text-sm text-slate-400 mt-1">Unlock premium agentic workflows and advanced automation</p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                  <PricingCard
-                    name="Free"
-                    price="Free"
-                    current={settings.subscriptionTier === "free"}
-                    features={[
-                      "Dashboard access",
-                      "Manual agent triggers",
-                      "3 tasks per day",
-                      "Basic system monitoring",
-                    ]}
-                    onSelect={() => { patch("subscriptionTier", "free"); toast("Downgraded to Free"); }}
-                  />
-                  <PricingCard
-                    name="Pro"
-                    price="£29"
-                    current={settings.subscriptionTier === "pro"}
-                    highlight
-                    features={[
-                      "Everything in Free",
-                      "Unlimited agent tasks",
-                      "Lead Hunter automation",
-                      "Priority model routing",
-                      "Watchdog alerts",
-                      "Webhook integrations",
-                    ]}
-                    onSelect={() => handleCheckout("pro")}
-                  />
-                  <PricingCard
-                    name="Enterprise"
-                    price="£99"
-                    current={settings.subscriptionTier === "enterprise"}
-                    features={[
-                      "Everything in Pro",
-                      "Autonomous mode",
-                      "Multi-agent orchestration",
-                      "Custom skill builder",
-                      "SLA & priority support",
-                      "Team dashboard (coming soon)",
-                    ]}
-                    onSelect={() => handleCheckout("enterprise")}
-                  />
-                </div>
-                <GlassCard title="Billing History" icon={<CreditCard size={16} />} className="max-w-4xl mx-auto">
-                  <div className="text-center py-6 text-sm text-slate-500">
-                    <p>No billing history yet.</p>
-                    <p className="text-xs mt-1">Transactions will appear here once you subscribe.</p>
-                  </div>
-                </GlassCard>
-              </section>
-            )}
+
 
             {/* ════════════ SETTINGS ════════════ */}
             {tab === "Settings" && (
