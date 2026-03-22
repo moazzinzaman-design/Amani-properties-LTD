@@ -751,32 +751,33 @@ export default function Page() {
   }, [checkGateway]);
 
   /* Heartbeat polling for OpenClaw & Swarm State */
+  const fetchSwarmData = useCallback(async () => {
+    try {
+      const [orcRes, xpRes] = await Promise.all([
+        fetch("/api/openclaw/orchestrator"),
+        fetch("/api/openclaw/agents", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify({ action: "GET_STATS" }) })
+      ]);
+      const orcData = await orcRes.json();
+      const xpData = await xpRes.json();
+      if (!orcData.error) setSwarmState(prev => ({ ...prev, ...orcData, agentXP: xpData.agentXP || prev.agentXP }));
+    } catch { /* ignore */ }
+  }, []);
+
   useEffect(() => {
     if (!settings.openClawEnabled || settings.openClawHeartbeatSec <= 0) return;
-    const fetchSwarm = async () => {
-      try {
-        const [orcRes, xpRes] = await Promise.all([
-          fetch("/api/openclaw/orchestrator"),
-          fetch("/api/openclaw/agents", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify({ action: "GET_STATS" }) })
-        ]);
-        const orcData = await orcRes.json();
-        const xpData = await xpRes.json();
-        if (!orcData.error) setSwarmState(prev => ({ ...prev, ...orcData, agentXP: xpData.agentXP || prev.agentXP }));
-      } catch { /* ignore */ }
-    };
     
     const tick = async () => {
       await checkGateway();
-      if (tab === "Swarm") fetchSwarm();
+      if (tab === "Swarm") fetchSwarmData();
       if (tab === "Projects") fetchProjects();
     };
     
     const id = setInterval(tick, settings.openClawHeartbeatSec * 1000);
-    if (tab === "Swarm") fetchSwarm(); // fetch immediately on tab switch
+    if (tab === "Swarm") fetchSwarmData(); // fetch immediately on tab switch
     if (tab === "Projects") fetchProjects();
     
     return () => clearInterval(id);
-  }, [settings.openClawEnabled, settings.openClawHeartbeatSec, checkGateway, tab]);
+  }, [settings.openClawEnabled, settings.openClawHeartbeatSec, checkGateway, tab, fetchSwarmData, fetchProjects]);
 
   /* Persist settings */
   useEffect(() => { localStorage.setItem(SK, JSON.stringify(settings)); }, [settings]);
@@ -1449,9 +1450,10 @@ export default function Page() {
                               fetch("/api/openclaw/agents", {
                                 method: "POST", headers: {"Content-Type":"application/json"},
                                 body: JSON.stringify({ agent, action: act.action, payload: { ...act.payload, pipelineId: activePipeline?.id } })
-                              }).then(r => r.json()).then(d => {
-                                if (d.success) toast(`${agent} completed: ${act.label}`, "success");
-                              });
+                                }).then(r => r.json()).then(d => {
+                                  if (d.success) toast(`${agent} completed: ${act.label}`, "success");
+                                  fetchSwarmData();
+                                });
                             }}
                             className="mt-2 w-full text-[8px] py-1.5 rounded-lg bg-gradient-to-r from-indigo-500/10 to-violet-500/10 border border-indigo-500/20 text-indigo-300 hover:from-indigo-500/20 hover:to-violet-500/20 font-black uppercase tracking-wider transition-all active:scale-95"
                           >
@@ -1862,6 +1864,7 @@ export default function Page() {
                                    method: "POST", headers: {"Content-Type":"application/json"},
                                    body: JSON.stringify({ action: "LAUNCH_PIPELINE", payload: { title: opp.title, description: opp.desc, steps: opp.steps.map(s => s.text), roi: opp.roi } })
                                  });
+                                 fetchSwarmData();
 
                                  if ((opp as any).apiRoute) {
                                    try {
@@ -1906,6 +1909,7 @@ export default function Page() {
                                      body: JSON.stringify({ action: "AUTO_EXECUTE_PIPELINE", payload: { pipelineId } })
                                    });
                                    toast(`✅ ${opp.title} BUILT & DEPLOYED!`, "success");
+                                   fetchSwarmData();
                                  }
                                }}
                                className="px-3 py-1.5 rounded-lg text-[9px] font-black uppercase tracking-widest bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 text-emerald-400 hover:from-emerald-500/30 hover:to-cyan-500/30 transition-all active:scale-95"
@@ -1998,6 +2002,7 @@ export default function Page() {
                                 <button key={agent} onClick={async () => {
                                   await fetch("/api/openclaw/orchestrator", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify({ action: "JOIN_PIPELINE", payload: { pipelineId: pipeline.id, agentName: agent } }) });
                                   toast(`${agent} joined!`, "success");
+                                  fetchSwarmData();
                                 }} className="text-[7px] px-2 py-1 rounded bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 hover:bg-indigo-500/20 font-black uppercase">+{agent}</button>
                               ))}</>}
                               {/* Pause / Resume */}
@@ -2005,6 +2010,7 @@ export default function Page() {
                                 const action = pipeline.status === 'paused' ? 'RESUME_PIPELINE' : 'PAUSE_PIPELINE';
                                 await fetch("/api/openclaw/orchestrator", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify({ action, payload: { pipelineId: pipeline.id } }) });
                                 toast(pipeline.status === 'paused' ? "Resumed!" : "Paused!");
+                                fetchSwarmData();
                               }} className={cx("text-[8px] px-2 py-1 rounded border font-black uppercase",
                                 pipeline.status === 'paused' ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400" : "bg-amber-500/10 border-amber-500/20 text-amber-400"
                               )}>
@@ -2013,7 +2019,7 @@ export default function Page() {
                               <button onClick={() => {
                                 console.log("DELETE clicked", pipeline.id);
                                 fetch("/api/openclaw/orchestrator", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify({ action: "DELETE_PIPELINE", payload: { pipelineId: pipeline.id } }) })
-                                  .then(() => toast("Pipeline deleted!"))
+                                  .then(() => { toast("Pipeline deleted!"); fetchSwarmData(); })
                                   .catch(err => console.error("Delete failed:", err));
                               }} className="text-[8px] px-2 py-1 rounded border bg-rose-500/10 border-rose-500/20 text-rose-400 hover:bg-rose-500/20 font-black uppercase">
                                 🗑 Delete
@@ -2093,6 +2099,7 @@ export default function Page() {
                                     await fetch("/api/openclaw/orchestrator", { method: "POST", headers: {"Content-Type":"application/json"},
                                       body: JSON.stringify({ action: "UPDATE_PIPELINE_STEPS", payload: { pipelineId: pipeline.id, stepId: step.id, done: !step.done } })
                                     });
+                                    fetchSwarmData();
                                   }} className={cx(
                                     "shrink-0 h-5 w-5 rounded border-2 flex items-center justify-center mt-0.5 transition-all",
                                     step.done ? "bg-emerald-500 border-emerald-500 text-white" : "border-slate-600 hover:border-indigo-400"
@@ -2114,6 +2121,7 @@ export default function Page() {
                                       await fetch("/api/openclaw/orchestrator", { method: "POST", headers: {"Content-Type":"application/json"},
                                         body: JSON.stringify({ action: "UPDATE_PIPELINE_STEPS", payload: { pipelineId: pipeline.id, stepId: step.id, label } })
                                       });
+                                      fetchSwarmData();
                                     }
                                   }} className="text-[8px] text-slate-600 hover:text-slate-300 px-1.5 py-0.5 rounded hover:bg-white/5 transition-all uppercase font-bold">
                                     Edit
