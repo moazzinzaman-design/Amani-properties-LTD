@@ -6,21 +6,51 @@
       "title": "To Do",
       "order": 0,
       "boardId": "",
-      "tasks": []
+      "tasks": [
+        {
+          "id": "task_dn7u02_mmnddlxy",
+          "title": "Untitled",
+          "description": null,
+          "priority": "MEDIUM",
+          "order": 0,
+          "columnId": "col_2hu4gu_mmmi8mr7",
+          "assigneeId": null
+        }
+      ]
     },
     {
       "id": "col_leq20v_mmmi8mr7",
       "title": "In Progress",
       "order": 1,
       "boardId": "",
-      "tasks": []
+      "tasks": [
+        {
+          "id": "task_hdqpo4_mmnddovz",
+          "title": "ooen code",
+          "description": "",
+          "priority": "MEDIUM",
+          "order": 0,
+          "columnId": "col_leq20v_mmmi8mr7",
+          "assigneeId": null
+        }
+      ]
     },
     {
       "id": "col_dg8m6z_mmmi8mr7",
       "title": "Done",
       "order": 2,
       "boardId": "",
-      "tasks": []
+      "tasks": [
+        {
+          "id": "task_acseu2_mmo6176a",
+          "title": "Untitled",
+          "description": null,
+          "priority": "MEDIUM",
+          "order": 0,
+          "columnId": "col_dg8m6z_mmmi8mr7",
+          "assigneeId": null
+        }
+      ]
     }
   ],
   "settings": {

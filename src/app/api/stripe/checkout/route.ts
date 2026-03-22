@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import Stripe from 'stripe';
+import { stripe } from '@/lib/stripe';
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json();
-    const { plan } = body;
+    const { plan, email } = body;
 
     const priceMap: Record<string, { name: string; amount: number }> = {
       pro: { name: 'Mission Control Pro', amount: 2900 },
@@ -24,11 +24,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid plan. Use "pro" or "enterprise".' }, { status: 400 });
     }
 
-    const stripe = new Stripe(secretKey);
-
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       payment_method_types: ['card'],
+      customer_email: email, // Associate payment with a specific email
       line_items: [{
         price_data: {
           currency: 'gbp',
@@ -38,6 +37,9 @@ export async function POST(req: NextRequest) {
         },
         quantity: 1,
       }],
+      metadata: {
+         plan: plan, // Keep track of which plan was purchased
+      },
       success_url: `${req.nextUrl.origin}/?billing=success`,
       cancel_url: `${req.nextUrl.origin}/?billing=cancelled`,
     });

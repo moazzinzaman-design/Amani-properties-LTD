@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import Stripe from 'stripe';
+import { stripe } from '@/lib/stripe';
+import { supabase } from '@/lib/supabase';
 
 export async function POST(req: NextRequest) {
   try {
@@ -9,8 +10,6 @@ export async function POST(req: NextRequest) {
     if (!secretKey || secretKey === 'sk_test_PLACEHOLDER' || !webhookSecret || webhookSecret === 'whsec_PLACEHOLDER') {
       return NextResponse.json({ received: false, error: 'Stripe not configured' }, { status: 503 });
     }
-
-    const stripe = new Stripe(secretKey);
 
     const rawBody = await req.text();
     const sig = req.headers.get('stripe-signature');
@@ -23,17 +22,36 @@ export async function POST(req: NextRequest) {
 
     switch (event.type) {
       case 'checkout.session.completed': {
-        const session = event.data.object;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const session = event.data.object as any;
         console.log('[Stripe] Checkout completed:', session.id);
+        
+        // Add Billing Event to Supabase for the Finance Agent to process
+        const { data: dbData } = await supabase.from('openclaw_memory').select('id, memory').single();
+        if (dbData) {
+            const mem = dbData.memory;
+            if (!mem.billing_events) mem.billing_events = [];
+            mem.billing_events.push({
+                id: session.id,
+                status: 'pending_invoice',
+                amount: session.amount_total,
+                customer_email: session.customer_details?.email,
+                plan: session.metadata?.plan,
+                date: new Date().toISOString()
+            });
+            await supabase.from('openclaw_memory').update({ memory: mem }).eq('id', dbData.id);
+        }
         break;
       }
       case 'customer.subscription.updated': {
-        const sub = event.data.object;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const sub = event.data.object as any;
         console.log('[Stripe] Subscription updated:', sub.id, sub.status);
         break;
       }
       case 'customer.subscription.deleted': {
-        const sub = event.data.object;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const sub = event.data.object as any;
         console.log('[Stripe] Subscription cancelled:', sub.id);
         break;
       }

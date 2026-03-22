@@ -14,6 +14,371 @@ import { dispatchAgentTask } from "@/services/agentService";
 import SystemHealth from "@/components/SystemHealth";
 import LeadHunter from "@/components/LeadHunter";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const REVENUE_STREAMS = [
+  { 
+    title: "SaaS Blueprint", roi: "$2k–$10k/mo", color: "text-indigo-400", 
+    apiRoute: "/api/revenue/saas-blueprint",
+    borderCls: "border-indigo-500/20 hover:border-indigo-500/50", stepCls: "border-indigo-500/30 text-indigo-400/70 bg-indigo-500/5", btnCls: "bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 hover:bg-indigo-500/30",
+    icon: "🚀",
+    desc: "Autonomous deployment of a micro-SaaS architecture. The system provisions a Vercel Next.js repository, wires Supabase PostgreSQL schemas, and integrates Stripe subscription billing for immediate multi-tenant user acquisition.",
+    steps: [
+      { text: "Market gap semantic analysis via Google Trends API + competitor SERP scraping", agent: "Researcher" },
+      { text: "System architecture compilation & Next.js 14 template provisioning", agent: "Architect" },
+      { text: "Database schema migration: users, subscriptions, and usage tables (Supabase)", agent: "Builder" },
+      { text: "Webhooks integration: Stripe price IDs, checkout sessions, and portal links", agent: "Builder" },
+      { text: "Automated end-to-end Cypress test suite execution & Lighthouse CI audit", agent: "QA" },
+      { text: "Infrastructure deployment: Vercel edge functions + global CDN caching", agent: "Deployer" },
+      { text: "SEO programmatic content generation via OpenAI API & sitemap injection", agent: "Copywriter" },
+      { text: "Launch sequence initiation: programmatic email outreach & Twitter bot scheduling", agent: "Marketer" },
+    ],
+    difficulty: "Medium", timeToRevenue: "2-4 weeks", agentTeam: ["researcher","architect","builder","copywriter","qa","deployer","marketer"],
+    permissions: ["Stripe API", "Supabase DB", "Vercel API", "OpenAI", "Resend API"], revenueModel: "Subscription ($19-149/mo tiers)", targetAudience: "Niche B2B SaaS operators",
+    profitMargin: "85-92%", monthlyOverhead: "$32/mo", breakEven: "~2 weeks", confidence: 87, risk: "Low", scalingStrategy: "Horizontal scaling via programmatic SEO & Ads", successMetrics: ["MRR", "Churn rate", "CAC", "LTV"], status: "ready"
+  },
+  { 
+    title: "Chrome Extension Factory", roi: "$500–$3k/mo", color: "text-cyan-400", 
+    borderCls: "border-cyan-500/20 hover:border-cyan-500/50", stepCls: "border-cyan-500/30 text-cyan-400/70 bg-cyan-500/5", btnCls: "bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/30",
+    icon: "🧩",
+    desc: "Programmatic generation of utility Chrome Extensions. The build pipeline assembles manifest V3 configurations, background service workers, and injects a freemium paywall script via LemonSqueezy.",
+    steps: [
+      { text: "Execute Puppeteer scraping on Chrome Web Store to identify underserved keyword clusters", agent: "Hunter" },
+      { text: "Generate Manifest V3 JSON schema and background service worker logic", agent: "Builder" },
+      { text: "Compile React-based popup interface and content script injectors", agent: "Builder" },
+      { text: "Implement OAuth2 flow and LemonSqueezy license key validation logic", agent: "Builder" },
+      { text: "Execute ESLint + Webpack bundling & obfuscate proprietary logic", agent: "QA" },
+      { text: "Generate promotional assets (1280x800 screenshots, 440x280 marquee) via Figma API", agent: "Designer" },
+      { text: "Submit payload to Chrome Developer Dashboard & bypass automated review flags", agent: "Deployer" },
+    ],
+    difficulty: "Easy", timeToRevenue: "1-2 weeks", agentTeam: ["hunter","builder","qa","designer","deployer"],
+    permissions: ["Chrome Web Store API", "LemonSqueezy API", "Figma API", "OpenAI"], revenueModel: "Freemium + Premium ($4.99 one-time)", targetAudience: "Productivity-focused knowledge workers",
+    profitMargin: "95%", monthlyOverhead: "$0", breakEven: "~1 week", confidence: 82, risk: "Low", scalingStrategy: "Launch 5-10 micro-extensions targeting distinct tail-keywords", successMetrics: ["DAU", "Uninstall Rate", "Premium uptake %"], status: "ready"
+  },
+  { 
+    title: "Lead Sniper Arbitration", roi: "$5k–$20k/mo", color: "text-emerald-400", 
+    borderCls: "border-emerald-500/20 hover:border-emerald-500/50", stepCls: "border-emerald-500/30 text-emerald-400/70 bg-emerald-500/5", btnCls: "bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30",
+    icon: "🎯",
+    desc: "High-volume outbound B2B lead generation infrastructure. Proxies scrape LinkedIn/Apollo, enrich data via over-the-counter APIs, and route through warmed-up Google Workspace domains using Spintax to circumvent spam filters.",
+    steps: [
+      { text: "Initialize 50+ Google Workspace auxiliary domains & verify DKIM/DMARC/SPF records", agent: "Deployer" },
+      { text: "Run automated domain warm-up sequences via Instantly/Smartlead API", agent: "Marketer" },
+      { text: "Scrape Apollo.io via proxy rotation to build targeted CSV lead lists", agent: "Hunter" },
+      { text: "Data enrichment: Verify SMTP deliverability via NeverBounce & extract custom variables", agent: "Researcher" },
+      { text: "Generate hyper-personalized Spintax email copy using OpenAI GPT-4o", agent: "Copywriter" },
+      { text: "Dispatch 10,000+ daily emails with webhook listeners for positive replies", agent: "Deployer" },
+      { text: "Route positive intra-inbox replies to human closer interface or automated Calendly bot", agent: "Marketer" },
+    ],
+    difficulty: "Medium", timeToRevenue: "1-3 weeks", agentTeam: ["deployer","marketer","hunter","researcher","copywriter"],
+    permissions: ["Instantly API", "Apollo API", "NeverBounce API", "Google Workspace Admin API"], revenueModel: "Per-lead ($30-100/lead) or Retainer", targetAudience: "B2B Agencies, SaaS, Real Estate",
+    profitMargin: "78-88%", monthlyOverhead: "$250/mo", breakEven: "~1 week", confidence: 91, risk: "Medium", scalingStrategy: "Expand infrastructure to 500+ sending domains across new verticals", successMetrics: ["Open Rate", "Positive Reply Rate", "Cost Per Lead"], status: "ready"
+  },
+  { 
+    title: "Software Arbitrage", roi: "$1.5k–$5k/mo", color: "text-amber-400", 
+    borderCls: "border-amber-500/20 hover:border-amber-500/50", stepCls: "border-amber-500/30 text-amber-400/70 bg-amber-500/5", btnCls: "bg-amber-500/10 border border-amber-500/20 text-amber-400 hover:bg-amber-500/30",
+    icon: "📦",
+    desc: "White-label digital template manufacturing. The system compiles boilerplate repositories (SaaS dashboards, landing pages, Notion OS) and dynamically reskins them for cross-listing on Envato, Gumroad, and AppSumo.",
+    steps: [
+      { text: "Scrape Envato Elements & Gumroad for trending software template categories", agent: "Hunter" },
+      { text: "Clone internal React/Tailwind base repositories & execute token-based reskinning (colors, fonts)", agent: "Builder" },
+      { text: "Generate dummy data JSON fixtures to populate UI components for realism", agent: "Builder" },
+      { text: "Execute Playwright to capture high-res promotional screenshots of the reskinned outputs", agent: "QA" },
+      { text: "Generate SEO-optimized product documentation, READMEs, and installation guides", agent: "Copywriter" },
+      { text: "Push compiled ZIP assets via API to Gumroad & Envato storefronts", agent: "Deployer" },
+      { text: "Initiate Reddit/IndieHackers automated marketing scripts for initial traction", agent: "Marketer" },
+    ],
+    difficulty: "Easy", timeToRevenue: "1-2 weeks", agentTeam: ["hunter","builder","qa","copywriter","deployer","marketer"],
+    permissions: ["Gumroad API", "GitHub API", "OpenAI"], revenueModel: "One-time purchase ($29-149 per template)", targetAudience: "Developers, Startup Founders",
+    profitMargin: "90-95%", monthlyOverhead: "$15/mo", breakEven: "~5 days", confidence: 79, risk: "Low", scalingStrategy: "Automate generation for 50+ hyper-specific niche categories", successMetrics: ["Units Sold", "AOV", "Refund Rate"], status: "ready"
+  },
+  { 
+    title: "Programmatic SEO Farm", roi: "$1k–$8k/mo", color: "text-rose-400", 
+    borderCls: "border-rose-500/20 hover:border-rose-500/50", stepCls: "border-rose-500/30 text-rose-400/70 bg-rose-500/5", btnCls: "bg-rose-500/10 border border-rose-500/20 text-rose-400 hover:bg-rose-500/30",
+    icon: "✍️",
+    desc: "High-velocity content indexing engine. Exploits long-tail zero-volume keywords by generating 10,000+ programmatic pages via Next.js Dynamic Routes, monetizing pure traffic arbitrage via Mediavine/AdSense.",
+    steps: [
+      { text: "Query Ahrefs API for massive datasets of low-KD (Keyword Difficulty) modifier keywords", agent: "Researcher" },
+      { text: "Establish SQLite/PostgreSQL database to act as the CMS source of truth", agent: "Architect" },
+      { text: "Prompt-chain OpenAI APIs to generate modular, non-duplicate factual content blocks", agent: "Copywriter" },
+      { text: "Inject specific geographic/industry parameters into Next.js [slug].tsx dynamic routes", agent: "Builder" },
+      { text: "Optimize On-Page technicals: canonical tags, Schema.org JSON-LD, Core Web Vitals", agent: "QA" },
+      { text: "Deploy Next.js static export (SSG) to Cloudflare Pages for ultra-fast TTFB", agent: "Deployer" },
+      { text: "Submit programmatic XML sitemaps to Google Search Console API for indexation", agent: "Deployer" },
+      { text: "Inject AdSense/Mediavine script tags upon reaching 50k sessions/month threshold", agent: "Marketer" },
+    ],
+    difficulty: "Medium", timeToRevenue: "2-3 months", agentTeam: ["researcher","architect","copywriter","builder","qa","deployer","marketer"],
+    permissions: ["Ahrefs API", "OpenAI", "Cloudflare API", "Google Search Console API"], revenueModel: "Display ads ($15-30 RPM) + Affiliate links", targetAudience: "Organic search traffic (Information Seekers)",
+    profitMargin: "88-95%", monthlyOverhead: "$35/mo", breakEven: "~2 months", confidence: 76, risk: "Medium", scalingStrategy: "Clone the frontend architecture to 10+ new domain verticals", successMetrics: ["Indexed Pages", "Organic Traffic", "RPM"], status: "ready"
+  },
+  { 
+    title: "API Marketplace Wrapping", roi: "$2k–$15k/mo", color: "text-violet-400", 
+    borderCls: "border-violet-500/20 hover:border-violet-500/50", stepCls: "border-violet-500/30 text-violet-400/70 bg-violet-500/5", btnCls: "bg-violet-500/10 border border-violet-500/20 text-violet-400 hover:bg-violet-500/30",
+    icon: "🔌",
+    desc: "Arbitrage AI endpoints and public datasets by wrapping them into high-availability microservices. Exposes REST/GraphQL endpoints on RapidAPI with strict Redis rate-limiting and JWT auth.",
+    steps: [
+      { text: "Identify fragmented, poorly-documented open-source tools or government datasets", agent: "Researcher" },
+      { text: "Provision scalable serverless architecture via AWS Lambda / Google Cloud Functions", agent: "Architect" },
+      { text: "Develop FastAPI (Python) or Express (Node.js) wrapper with strict parameter validation", agent: "Builder" },
+      { text: "Implement Upstash Redis for multi-tier API rate limiting and token bucket algorithms", agent: "Builder" },
+      { text: "Execute load testing via Artillery to ensure sub-100ms latency under stress", agent: "QA" },
+      { text: "Publish OpenAPI/Swagger documentation and SDK wrappers to RapidAPI storefront", agent: "Deployer" },
+      { text: "Configure webhooks for Stripe meter usage billing (e.g. $0.005 per execution)", agent: "Deployer" },
+    ],
+    difficulty: "Hard", timeToRevenue: "3-6 weeks", agentTeam: ["researcher","architect","builder","qa","deployer"],
+    permissions: ["AWS / GCP", "Upstash Redis", "RapidAPI Partner", "Stripe API"], revenueModel: "Usage-based ($0.001-0.10/call) + Subscription TIers", targetAudience: "B2B Developers, SaaS Companies, Data Scientists",
+    profitMargin: "70-85%", monthlyOverhead: "$50-200/mo", breakEven: "~4 weeks", confidence: 73, risk: "Medium", scalingStrategy: "Aggressive cross-listing on API directories & Developer Forums", successMetrics: ["API calls/mo", "Latency", "Error Rate", "MRR"], status: "ready"
+  },
+  { 
+    title: "Upwork/Fiverr Auto-Bidding", roi: "$3k–$12k/mo", color: "text-pink-400", 
+    borderCls: "border-pink-500/20 hover:border-pink-500/50", stepCls: "border-pink-500/30 text-pink-400/70 bg-pink-500/5", btnCls: "bg-pink-500/10 border border-pink-500/20 text-pink-400 hover:bg-pink-500/30",
+    icon: "🤖",
+    desc: "A headless browser grid monitors freelance marketplaces tracking RSS feeds for keyword matches. Evaluates client budget history and auto-dispatches highly tailored proposal injections within 60 seconds of job posting.",
+    steps: [
+      { text: "Initialize RSS/API polling for precise keywords (e.g. 'React Native', 'Scraping')", agent: "Hunter" },
+      { text: "Parse job description and cross-reference client historical spend and review score", agent: "Researcher" },
+      { text: "Assemble personalized cover letter emphasizing relevant portfolio URLs using RAG", agent: "Copywriter" },
+      { text: "Submit proposal via Selenium/Puppeteer bypassing basic bot-detection mechanisms", agent: "Deployer" },
+      { text: "Monitor inbox via IMAP; trigger ChatGPT auto-responder for initial client follow-ups", agent: "Marketer" },
+      { text: "Upon contract award: scaffold baseline project repository & draft SOW for human review", agent: "Architect" },
+    ],
+    difficulty: "Medium", timeToRevenue: "1-2 weeks", agentTeam: ["hunter","researcher","copywriter","deployer","marketer","architect"],
+    permissions: ["Upwork API / RSS", "Fiverr API", "OpenAI", "IMAP"], revenueModel: "Per-project ($500-5k) or hourly ($50-150/hr)", targetAudience: "SMBs hiring on freelance platforms",
+    profitMargin: "65-80%", monthlyOverhead: "$60/mo", breakEven: "~1 week", confidence: 84, risk: "Low", scalingStrategy: "Maintain distinct agency profiles for specialized verticals (e.g. Design vs. Backend)", successMetrics: ["Bid-to-Win Ratio", "Average Contract Value", "JSS Score"], status: "ready"
+  },
+  { 
+    title: "Faceless YouTube Automation", roi: "$2k–$20k/mo", color: "text-red-400", 
+    borderCls: "border-red-500/20 hover:border-red-500/50", stepCls: "border-red-500/30 text-red-400/70 bg-red-500/5", btnCls: "bg-red-500/10 border border-red-500/20 text-red-400 hover:bg-red-500/30",
+    icon: "🎥",
+    desc: "Fully autonomous video production pipeline. Parses trending Reddit threads or news RSS, converts to TTS audio, overlays stock b-roll via FFmpeg, and uploads to YouTube via OAuth API.",
+    steps: [
+      { text: "Scrape high-engagement subreddits (r/AskReddit, r/TrueOffMyChest) via Praw API", agent: "Hunter" },
+      { text: "Sanitize text and structure into high-retention 8-minute script formats", agent: "Copywriter" },
+      { text: "Generate high-fidelity voiceover using ElevenLabs API (cloned human voices)", agent: "Builder" },
+      { text: "Query Pexels/Storyblocks API for contextual background video & audio tracks", agent: "Researcher" },
+      { text: "Execute FFmpeg scripts to composite audio, video arrays, and generate hardcoded subtites (Whisper API)", agent: "Builder" },
+      { text: "Generate clickbait thumbnail via Midjourney API + Canva programmatic templating", agent: "Designer" },
+      { text: "Upload MP4 via YouTube Data API v3, injecting SEO tags, descriptions, and schedule release", agent: "Deployer" },
+    ],
+    difficulty: "Medium", timeToRevenue: "3-6 months", agentTeam: ["hunter","copywriter","builder","researcher","designer","deployer"],
+    permissions: ["Reddit API", "ElevenLabs API", "Pexels API", "YouTube Data API", "Midjourney API"], revenueModel: "YouTube AdSense ($3-10 RPM) + Sponsorships", targetAudience: "Binge-watching entertainment consumers",
+    profitMargin: "90%", monthlyOverhead: "$150/mo", breakEven: "~3 months", confidence: 78, risk: "Medium", scalingStrategy: "Deploy 5+ channels targeting different high-RPM niches (Finance, Crypto, Tech)", successMetrics: ["CTR", "AVD (Average View Duration)", "Subscriber Growth"], status: "ready"
+  },
+  { 
+    title: "Print-on-Demand Empire", roi: "$1k–$5k/mo", color: "text-orange-400", 
+    borderCls: "border-orange-500/20 hover:border-orange-500/50", stepCls: "border-orange-500/30 text-orange-400/70 bg-orange-500/5", btnCls: "bg-orange-500/10 border border-orange-500/20 text-orange-400 hover:bg-orange-500/30",
+    icon: "👕",
+    desc: "Algorithmic generation of graphic tees and apparel. Connects Midjourney/DALL-E to Printful/Printify via Shopify API, operating a zero-inventory dropshipping model.",
+    steps: [
+      { text: "Scrape Pinterest & TikTok for emerging micro-aesthetic and phrase trends", agent: "Researcher" },
+      { text: "Prompt Midjourney/Stable Diffusion to generate high-res, transparent PNG vector-style graphics", agent: "Designer" },
+      { text: "Apply image upscaling via Real-ESRGAN to meet 300 DPI print requirements", agent: "Builder" },
+      { text: "Map product coordinates to Printful mockup API to generate lifestyle product listings", agent: "Deployer" },
+      { text: "Push integrated product JSON to Shopify Storefront with dynamic pricing markup", agent: "Builder" },
+      { text: "Generate engaging Instagram/Pinterest descriptive copy and push posts via Buffer API", agent: "Marketer" },
+      { text: "Handle order routing: Stripe captures payment, webhook fires fulfillment to Printify automatically", agent: "Architect" },
+    ],
+    difficulty: "Medium", timeToRevenue: "2-4 weeks", agentTeam: ["researcher","designer","builder","deployer","marketer","architect"],
+    permissions: ["Midjourney API", "Printful API", "Shopify Admin API", "Stripe API"], revenueModel: "Retail Markup (E-commerce)", targetAudience: "Niche hobbyists, meme culture, event specific",
+    profitMargin: "30-45%", monthlyOverhead: "$40/mo (Shopify + Apps)", breakEven: "~1 month", confidence: 81, risk: "Low", scalingStrategy: "Launch 100+ new designs weekly, kill off non-performers automatically", successMetrics: ["Conversion Rate", "ROAS", "Customer Acquisition Cost"], status: "ready"
+  },
+  { 
+    title: "Trading Grid Bot (Crypto)", roi: "$500–$10k/mo", color: "text-emerald-500", 
+    borderCls: "border-emerald-500/20 hover:border-emerald-500/50", stepCls: "border-emerald-500/30 text-emerald-500/70 bg-emerald-500/5", btnCls: "bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 hover:bg-emerald-500/30",
+    icon: "📈",
+    desc: "Quantitative execution engine connecting to Binance/Bybit via WebSockets. Employs Delta-Neutral or Grid trading algorithms to harvest volatility spread, executing micro-trades milliseconds after tick data.",
+    steps: [
+      { text: "Establish secure WebSocket data feeds for real-time orderbook and OHLCV tick data", agent: "Architect" },
+      { text: "Process data streams locally, calculating RSI, Bollinger Bands, and VWAP in memory", agent: "Analyst" },
+      { text: "Identify high-volatility, sideways-trending assets suitable for grid deployment", agent: "Researcher" },
+      { text: "Deploy algorithmic grid logic: placing staggered Maker Limit Buy/Sell orders dynamically", agent: "Builder" },
+      { text: "Implement circuit-breaker risk management: auto-liquidate if asset breaks defined support/resistance", agent: "QA" },
+      { text: "Execute orders via CCXT library ensuring low-latency execution and handling API rate limits", agent: "Deployer" },
+      { text: "Log execution PnL to internal PostgreSQL dashboard for daily re-balancing performance tracking", agent: "Analyst" },
+    ],
+    difficulty: "Extreme/Hard", timeToRevenue: "1 week", agentTeam: ["architect","analyst","researcher","builder","qa","deployer"],
+    permissions: ["Binance / Bybit API Keys (Trade-only)", "WebSocket Server", "PostgreSQL"], revenueModel: "Capital Gains / Trading Yield", targetAudience: "Self (Proprietary Trading)",
+    profitMargin: "Variable (Depends on capital)", monthlyOverhead: "$100/mo (VPS latency)", breakEven: "N/A", confidence: 60, risk: "High", scalingStrategy: "Increase allocated capital incrementally based on 30-day Sharpe ratio performance", successMetrics: ["Sharpe Ratio", "Max Drawdown", "Daily PnL", "Win Rate"], status: "setup"
+  },
+  { 
+    title: "Smart Contract QA (Bug Bounties)", roi: "$0–$50k+/mo", color: "text-teal-400", 
+    borderCls: "border-teal-500/20 hover:border-teal-500/50", stepCls: "border-teal-500/30 text-teal-400/70 bg-teal-500/5", btnCls: "bg-teal-500/10 border border-teal-500/20 text-teal-400 hover:bg-teal-500/30",
+    icon: "🛡️",
+    desc: "Automated Web3 security reconnaissance. Scans Github for newly deployed Solidity contracts, running Slither, Mythril, and AI context-checks to locate reentrancy or logic flaws for whitehat bounty claims.",
+    steps: [
+      { text: "Monitor Immunefi, Code4rena, and Etherscan for newly deployed unverified/verified high-TVL contracts", agent: "Hunter" },
+      { text: "Clone contract source code and flatten Solidity files for local static analysis", agent: "Builder" },
+      { text: "Execute Slither AST analyzer and Mythril symbolic execution engines natively", agent: "QA" },
+      { text: "Pipe flagged vulnerable functions into specific LLM prompts to analyze actual exploitability (Logic flaws)", agent: "Analyst" },
+      { text: "Draft professional Whitehat vulnerability disclosure reports payload (PoC code via Foundry)", agent: "Copywriter" },
+      { text: "Transmit encrypted PoC to project security contacts or Immunefi dashboard", agent: "Deployer" },
+    ],
+    difficulty: "Extreme/Hard", timeToRevenue: "Variable", agentTeam: ["hunter","builder","qa","analyst","copywriter","deployer"],
+    permissions: ["Etherscan API", "GitHub API", "Immunefi Auth", "OpenAI / Claude-3 API"], revenueModel: "Bug Bounty Payouts ($500-$100k+ per critical hit)", targetAudience: "Web3 Protocols, DeFi DAOs",
+    profitMargin: "100%", monthlyOverhead: "$50/mo", breakEven: "Variable", confidence: 55, risk: "Low", scalingStrategy: "Increase server compute to analyze dozens of chains (Arbitrum, Base, Optimism) simultaneously", successMetrics: ["Contracts Analyzed", "False Positive Rate", "Bounties Paid"], status: "setup"
+  },
+  { 
+    title: "Micro-SaaS Fleet", roi: "$3k–$15k/mo", color: "text-blue-400", 
+    borderCls: "border-blue-500/20 hover:border-blue-500/50", stepCls: "border-blue-500/30 text-blue-400/70 bg-blue-500/5", btnCls: "bg-blue-500/10 border border-blue-500/20 text-blue-400 hover:bg-blue-500/30",
+    icon: "🚢",
+    desc: "Deployment of multiple independent, single-feature SaaS products solving hyper-specific developer/marketing pain points (e.g. SVG Optimizers, JSON mock data generators). Monetized via low-friction $5/mo subscriptions.",
+    steps: [
+      { text: "Scrape StackOverflow & Reddit r/webdev for highly frequent, mundane technical pain points", agent: "Researcher" },
+      { text: "Provision a standardized monorepo architecture (Turborepo + Next.js + Tailwind)", agent: "Architect" },
+      { text: "Generate the core utility logic component (e.g., Image format converter algorithm)", agent: "Builder" },
+      { text: "Wrap the utility in an aesthetically premium UI and integrate Stripe single-tier payment wall", agent: "Designer" },
+      { text: "Deploy sub-domain to Vercel (e.g. format-json.microsaas.dev)", agent: "Deployer" },
+      { text: "Auto-post launch announcements to ProductHunt, HackerNews, and Dev.to", agent: "Marketer" },
+      { text: "Monitor server analytics and auto-scale Postgres read replicas based on traffic load", agent: "QA" },
+    ],
+    difficulty: "Medium", timeToRevenue: "3-4 weeks", agentTeam: ["researcher","architect","builder","designer","deployer","marketer","qa"],
+    permissions: ["Vercel API", "Stripe API", "Reddit/PH API"], revenueModel: "Micro-Subscriptions ($5-10/mo)", targetAudience: "Indie Hackers, Freelancers, Designers",
+    profitMargin: "85%", monthlyOverhead: "$40/mo", breakEven: "~3 weeks", confidence: 85, risk: "Low", scalingStrategy: "Build a 'fleet' of 20+ interconnecting tools, cross-selling via a universal dashboard", successMetrics: ["Combined MRR", "DAU Active Sessions", "CAC"], status: "ready"
+  },
+  { 
+    title: "Newsletter Sponsorship Arb", roi: "$1.5k–$7k/mo", color: "text-zinc-300", 
+    borderCls: "border-zinc-500/20 hover:border-zinc-500/50", stepCls: "border-zinc-500/30 text-zinc-300/70 bg-zinc-500/5", btnCls: "bg-zinc-500/10 border border-zinc-500/20 text-zinc-300 hover:bg-zinc-500/30",
+    icon: "📧",
+    desc: "Automated curation and distribution of niche B2B newsletters (e.g., 'React Job Board', 'AI Supply Chain News'). Grows audience via programmatic Twitter/LinkedIn threads and monetizes by selling ad slots via Passionfroot.",
+    steps: [
+      { text: "Curate top 10 daily news articles from targeted RSS feeds via Zapier webhooks", agent: "Hunter" },
+      { text: "Summarize and format the articles into cohesive, engaging email sections using LLMs", agent: "Copywriter" },
+      { text: "Compile HTML payload via MJML templates to ensure cross-client rendering tracking", agent: "Builder" },
+      { text: "Generate Twitter thread variations of the newsletter content and auto-schedule via Typefully API", agent: "Marketer" },
+      { text: "Push final email payload to Beehiiv / ConvertKit API for 9:00AM EST distribution", agent: "Deployer" },
+      { text: "Scrape competitor newsletters to identify active sponsors and trigger direct outbound B2B pitches", agent: "Strategist" },
+      { text: "Manage incoming ad placements through programmatic calendar insertion (Passionfroot API)", agent: "Deployer" },
+    ],
+    difficulty: "Medium", timeToRevenue: "2-4 months", agentTeam: ["hunter","copywriter","builder","marketer","deployer","strategist"],
+    permissions: ["Beehiiv/ConvertKit API", "Twitter API", "Passionfroot API", "OpenAI"], revenueModel: "Sponsorships ($100-300 per issue) + Affiliate", targetAudience: "Niche Professionals, Industry Operators",
+    profitMargin: "95%", monthlyOverhead: "$30/mo", breakEven: "~2 months", confidence: 80, risk: "Low", scalingStrategy: "Launch 'sister' newsletters to capture adjacent markets, offering bundle ad pricing", successMetrics: ["Subscriber Growth", "Open Rate (Unique)", "CTR", "Sponsorship Fill Rate"], status: "ready"
+  },
+  { 
+    title: "Serverless Cloud Arbitrage", roi: "$4k–$12k/mo", color: "text-slate-200", 
+    borderCls: "border-slate-500/20 hover:border-slate-500/50", stepCls: "border-slate-500/30 text-slate-300/70 bg-slate-500/5", btnCls: "bg-slate-500/10 border border-slate-500/20 text-slate-300 hover:bg-slate-500/30",
+    icon: "☁️",
+    desc: "Provides managed Web Hosting and Cloud Storage for non-technical local businesses. Automatically spins up optimized WordPress/Ghost droplets on DigitalOcean at a $5 cost, charging clients $50-100/mo for 'Premium Managed Cloud'.",
+    steps: [
+      { text: "Scrape local business listings with outdated SSL certificates or >4s page load times", agent: "Researcher" },
+      { text: "Send automated audit reports outlining security flaws and SEO penalties of their current host", agent: "Copywriter" },
+      { text: "Upon client approval, initiate Terraform/Ansible script to provision DigitalOcean Droplet via API", agent: "Architect" },
+      { text: "Execute automated site migration (DB dump, rsync files, rewrite configurations)", agent: "Builder" },
+      { text: "Configure Cloudflare DNS, issue strict TLS certificates, and configure NGINX caching layer", agent: "Deployer" },
+      { text: "Install automated UpdraftPlus backup cron-jobs dropping to Amazon S3 bucket", agent: "QA" },
+      { text: "Generate automated monthly performance/uptime reports and auto-bill via Stripe", agent: "Marketer" },
+    ],
+    difficulty: "Hard", timeToRevenue: "3-5 weeks", agentTeam: ["researcher","copywriter","architect","builder","deployer","qa","marketer"],
+    permissions: ["DigitalOcean API", "Cloudflare API", "Stripe API", "AWS S3 API"], revenueModel: "Managed Retainer ($50-150/mo per client)", targetAudience: "Local Businesses, Small E-commerce, Restaraunts",
+    profitMargin: "85-90%", monthlyOverhead: "$150/mo (Servers)", breakEven: "~3 weeks", confidence: 88, risk: "Medium (requires client support)", scalingStrategy: "Implement WHMCS to automate client billing and ticketing 100% hands-free", successMetrics: ["Server Uptime", "MRR", "Churn Rate", "Margin per Droplet"], status: "setup"
+  },
+  { 
+    title: "Web Scraper API Service", roi: "$1.5k–$8k/mo", color: "text-fuchsia-400", 
+    borderCls: "border-fuchsia-500/20 hover:border-fuchsia-500/50", stepCls: "border-fuchsia-500/30 text-fuchsia-400/70 bg-fuchsia-500/5", btnCls: "bg-fuchsia-500/10 border border-fuchsia-500/20 text-fuchsia-400 hover:bg-fuchsia-500/30",
+    icon: "🕷️",
+    desc: "Build and lease proprietary data-scraping infrastructure. Clients submit URLs; the payload rotates through BrightData residential proxies, bypasses Cloudflare/Datadome protections via headless stealth browsers, and returns clean JSON.",
+    steps: [
+      { text: "Provision scalable container architecture on Kubernetes to handle Puppeteer-Stealth clustering", agent: "Architect" },
+      { text: "Integrate residential proxy rotation network (BrightData/Oxylabs) logic into core execution script", agent: "Builder" },
+      { text: "Develop parsing algorithms to extract common e-commerce, real estate, and directory data trees", agent: "Analyst" },
+      { text: "Build external GraphQL API surface allowing clients to define parsing schemas", agent: "Deployer" },
+      { text: "Implement Captcha-solving fallback services (2Captcha/Capsolver API integrations)", agent: "QA" },
+      { text: "Construct marketing portal and SDK libraries demonstrating 99.9% extraction success rate", agent: "Copywriter" },
+      { text: "Charge per 1,000 successful extraction requests via Stripe Metered Billing", agent: "Strategist" },
+    ],
+    difficulty: "Hard", timeToRevenue: "4-6 weeks", agentTeam: ["architect","builder","analyst","deployer","qa","copywriter","strategist"],
+    permissions: ["BrightData Proxy Auth", "AWS EKS / GKE", "Stripe API"], revenueModel: "Usage-Based ($2-5 per 1k requests)", targetAudience: "Data aggregators, AI Researchers, Hedge Funds",
+    profitMargin: "60-75%", monthlyOverhead: "$300-1000/mo (Proxy bandwidth)", breakEven: "~2 months", confidence: 72, risk: "Medium", scalingStrategy: "Expand into managed DaaS (Data as a Service) selling pre-compiled datasets (e.g. Zillow complete dump)", successMetrics: ["Proxy Block Rate", "Latency", "Revenue per GB", "Enterprise Contracts"], status: "setup"
+  },
+  { 
+    title: "Discord Paid Community", roi: "$5k–$25k/mo", color: "text-indigo-500", 
+    borderCls: "border-indigo-500/20 hover:border-indigo-500/50", stepCls: "border-indigo-500/30 text-indigo-400/70 bg-indigo-500/5", btnCls: "bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 hover:bg-indigo-500/30",
+    icon: "💬",
+    desc: "Operation of a gated 'Alpha ' Discord server. A suite of Discord JS bots scrape Twitter, on-chain scanner contracts, and news feeds to provide premium real-time alerts to paying members.",
+    steps: [
+      { text: "Initialize Discord Guild architecture with granular role-based permissions and hidden channels", agent: "Architect" },
+      { text: "Integrate Whop/Launchpass API bot for automated Stripe subscription verification and role assignment", agent: "Deployer" },
+      { text: "Develop specialized Python data-ingestion bots (e.g. tracking crypto whale wallet movements on Etherscan)", agent: "Builder" },
+      { text: "Develop Sentiment Analysis bot consuming NewsAPI to push market-moving headlines in < 100ms", agent: "Analyst" },
+      { text: "Create daily summary algorithms providing morning and evening 'Alpha Briefings' via LLMs", agent: "Copywriter" },
+      { text: "Execute X (Twitter) promotional campaigns demonstrating the value/ROI of the enclosed data feeds", agent: "Marketer" },
+      { text: "Manage server moderation queue using TensorFlow toxicity models to automatically prune bad actors", agent: "QA" },
+    ],
+    difficulty: "Medium", timeToRevenue: "2-4 weeks", agentTeam: ["architect","deployer","builder","analyst","copywriter","marketer","qa"],
+    permissions: ["Discord Bot Token", "Whop API", "Etherscan/NewsAPI", "Twitter API"], revenueModel: "Subscription ($30-100/mo)", targetAudience: "Traders, Hustlers, Power-users",
+    profitMargin: "90%", monthlyOverhead: "$80/mo (Bot VPS hosting)", breakEven: "~1 week", confidence: 86, risk: "Low", scalingStrategy: "Partner with large X (Twitter) influencers for revenue-share affiliates", successMetrics: ["Monthly Recurring Revenue", "Subscriber Churn Rate", "Messages per Day"], status: "ready"
+  },
+  { 
+    title: "E-commerce Dropship Engine", roi: "$2k–$20k/mo", color: "text-rose-500", 
+    borderCls: "border-rose-500/20 hover:border-rose-500/50", stepCls: "border-rose-500/30 text-rose-400/70 bg-rose-500/5", btnCls: "bg-rose-500/10 border border-rose-500/20 text-rose-500 hover:bg-rose-500/30",
+    icon: "🛍️",
+    desc: "Algorithmic dropshipping infrastructure. Continuously analyzes TikTok Ads library for winning products, automatically duplicates stores via Shopify headless API, and initiates automated retargeting ad campaigns.",
+    steps: [
+      { text: "Scrape TikTok Ads Library + Minea to identify climbing products with high engagement velocity", agent: "Hunter" },
+      { text: "Source directly from AliExpress/CJ Dropshipping APIs to verify sub-7 day shipping arbitrage margins", agent: "Strategist" },
+      { text: "Provision localized Shopify storefront dynamically, injecting high-conversion copy and FOMO timers", agent: "Builder" },
+      { text: "Download winning competitor video ads and auto-edit (crop, filter, TTS) to bypass hash matching", agent: "Designer" },
+      { text: "Trigger Meta/TikTok Ads Manager via API to launch localized $50/day test campaigns", agent: "Marketer" },
+      { text: "Analyze ROAS thresholds: Automate aggressive budget scaling on winning ad sets, kill losers instantly", agent: "Analyst" },
+      { text: "Forward order payloads directly to supplier fulfillment CRM to maintain hands-off logistics", agent: "Deployer" },
+    ],
+    difficulty: "Hard", timeToRevenue: "1-2 weeks", agentTeam: ["hunter","strategist","builder","designer","marketer","analyst","deployer"],
+    permissions: ["Shopify API", "Meta Ads API", "TikTok Ads API", "Supplier CRM/API"], revenueModel: "Retail Arbitrage", targetAudience: "Impulse consumer buyers",
+    profitMargin: "15-30%", monthlyOverhead: "$500+ (Requires Ad Capital)", breakEven: "Variable", confidence: 65, risk: "High", scalingStrategy: "Scale horizontal (testing 5+ products a week) and vertical (aggressive ad spend on winners)", successMetrics: ["ROAS (Return on Ad Spend)", "CPA", "AOV", "Conversion Rate"], status: "setup"
+  },
+  { 
+    title: "Automated Audiobook Publisher", roi: "$1.5k–$5k/mo", color: "text-yellow-400", 
+    borderCls: "border-yellow-500/20 hover:border-yellow-500/50", stepCls: "border-yellow-500/30 text-yellow-500/70 bg-yellow-500/5", btnCls: "bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 hover:bg-yellow-500/30",
+    icon: "🎧",
+    desc: "Mass production of royalty-free classic literature and public domain content into premium audiobooks via state-of-the-art TTS audio pipelines. Published directly to Audible/ACX.",
+    steps: [
+      { text: "Scrape Project Gutenberg for highly-rated public domain works (Pre-1925 US Copyright)", agent: "Researcher" },
+      { text: "Parse and sanitize textual data, removing forewords, formatting errors, and archaic artifacts", agent: "Builder" },
+      { text: "Feed cleaned text chunks into ElevenLabs/OpenAI TTS API using distinct dramatic character voices", agent: "Analyst" },
+      { text: "Execute automated audio mastering protocol: LUFS leveling, noise gating, and ACX RMS requirement checks", agent: "QA" },
+      { text: "Generate high-quality square cover art leveraging DALL-E 3 and programmatic typography overlays", agent: "Designer" },
+      { text: "Package final WAV/MP3 files alongside metadata and submit to ACX/Findaway Voices APIs", agent: "Deployer" },
+      { text: "Claim promotional codes and distribute via automated Reddit/Facebook niche community outreach", agent: "Marketer" },
+    ],
+    difficulty: "Medium", timeToRevenue: "1-2 months", agentTeam: ["researcher","builder","analyst","qa","designer","deployer","marketer"],
+    permissions: ["Project Gutenberg Auth", "ElevenLabs API", "ACX Platform", "Midjourney API"], revenueModel: "Royalties (40% exclusively on Audible)", targetAudience: "Audiobook listeners, Commuters, Students",
+    profitMargin: "90%", monthlyOverhead: "$50/mo", breakEven: "~1 month", confidence: 89, risk: "Low", scalingStrategy: "Process 50+ public domain novels monthly into cross-platform libraries", successMetrics: ["Bounty Conversions", "Listening Hours", "Royalty Output", "ACX QA Pass Rate"], status: "ready"
+  },
+  { 
+    title: "Virtual AI Assistant Agency", roi: "$5k–$30k/mo", color: "text-purple-400", 
+    borderCls: "border-purple-500/20 hover:border-purple-500/50", stepCls: "border-purple-500/30 text-purple-400/70 bg-purple-500/5", btnCls: "bg-purple-500/10 border border-purple-500/20 text-purple-400 hover:bg-purple-500/30",
+    icon: "🤖",
+    desc: "B2B integration service. The operations team identifies legacy businesses and deploys secure, fine-tuned RAG Chatbots to automate their internal customer support and lead qualification.",
+    steps: [
+      { text: "Identify brick-and-mortar websites via Google Maps API lacking active Live Chat widgets", agent: "Hunter" },
+      { text: "Initiate cold-email sequences proposing a 'Free Pilot' of a custom-trained AI support agent", agent: "Marketer" },
+      { text: "Upon meeting: scrape the client's entire website, help docs, and PDFs into a structured Vector Database", agent: "Researcher" },
+      { text: "Provision a Langchain RAG architecture connecting GPT-4 to the local Pinecone Vector store", agent: "Architect" },
+      { text: "Inject JavaScript chat-widget payload into client's Shopify/WordPress environment", agent: "Builder" },
+      { text: "Configure Webhooks to push qualified, localized leads directly from the Chatbot into the client CRM", agent: "Deployer" },
+      { text: "Enable centralized dashboard for client to review transcripts and enforce $500/mo retainer billing", agent: "Strategist" },
+    ],
+    difficulty: "Hard", timeToRevenue: "3-6 weeks", agentTeam: ["hunter","marketer","researcher","architect","builder","deployer","strategist"],
+    permissions: ["Google Maps API", "OpenAI / Anthropic", "Pinecone DB", "Stripe API"], revenueModel: "Setup Fee ($1k-5k) + Monthly Maintenance Retainer ($500+)", targetAudience: "Law Firms, Dental Clinics, E-commerce Shops",
+    profitMargin: "80-90%", monthlyOverhead: "$100/mo (LLM tokens + Vector DB)", breakEven: "~1 week", confidence: 83, risk: "Medium (Requires Sales)", scalingStrategy: "Productize the offering into a self-serve platform once 10 'done-for-you' clients are acquired", successMetrics: ["Client LTV", "Chat Resolutions", "Lead Conversion Rate"], status: "setup"
+  },
+  { 
+    title: "Local SEO Agencybot (GMB)", roi: "$2k–$10k/mo", color: "text-amber-500", 
+    borderCls: "border-amber-500/20 hover:border-amber-500/50", stepCls: "border-amber-500/30 text-amber-500/70 bg-amber-500/5", btnCls: "bg-amber-500/10 border border-amber-500/20 text-amber-500 hover:bg-amber-500/30",
+    icon: "📍",
+    desc: "Autonomous hyper-local SEO optimization protocol. Operates a fleet of bots that claim, manage, and algorithmically rank Google My Business (GMB) profiles for local service businesses.",
+    steps: [
+      { text: "Scan geographical grids via Maps API identifying 'Unclaimed' local businesses with 0-5 reviews", agent: "Researcher" },
+      { text: "Formulate outbound direct mail/email pitch highlighting the exact revenue loss from poor local SEO", agent: "Copywriter" },
+      { text: "Execute OAuth handshake for client GMB profile access upon contract finalization", agent: "Deployer" },
+      { text: "Deploy geogrid rank tracking (LocalFalcon) to establish baseline visibility maps", agent: "Analyst" },
+      { text: "Programmatically inject high-density EXIF-tagged local images and keyword-optimized GMB posts weekly", agent: "Builder" },
+      { text: "Automate execution of localized citation building across 50+ major directories (Yelp, YellowPages)", agent: "Marketer" },
+      { text: "Implement SMS/Email review-gating automation linking client CRM to automated 5-star Google review triggers", agent: "Architect" },
+    ],
+    difficulty: "Medium", timeToRevenue: "2-4 weeks", agentTeam: ["researcher","copywriter","deployer","analyst","builder","marketer","architect"],
+    permissions: ["Google Business Profile API", "Local Ranking APIs", "Twilio API"], revenueModel: "Monthly Retainer ($300-1000/mo)", targetAudience: "Plumbers, Roofers, Local Trades",
+    profitMargin: "90%", monthlyOverhead: "$80/mo", breakEven: "~2 weeks", confidence: 88, risk: "Low", scalingStrategy: "Whitelabel the automated tracking dashboard to other smaller agencies", successMetrics: ["Search Impressions", "Maps Pack Ranking", "Calls Generated", "Review Velocity"], status: "ready"
+  }
+];
+
 /* ── Isolated Components for Performance ── */
 function LiveClock() {
   const [clock, setClock] = useState("");
@@ -88,7 +453,7 @@ function TaskInput({ onAdd }: { onAdd: (t: string) => void }) {
 }
 
 /* ── Types ─────────────────────────────────────────────────────── */
-type Tab = "Home" | "Projects" | "Tasks" | "Analytics" | "Swarm" | "Deployments" | "Billing" | "Settings" | "Revenue" | "Bank";
+type Tab = "Home" | "Projects" | "Tasks" | "Analytics" | "Swarm" | "Deployments" | "Billing" | "Settings" | "Revenue" | "Bank" | "SEO Report";
 type LogLevel = "info" | "warn" | "error" | "success";
 type Todo = { id: number; text: string; done: boolean; col: "todo" | "doing" | "done" };
 type Toast = { id: number; msg: string; level: LogLevel };
@@ -566,6 +931,7 @@ export default function Page() {
     { label: "Swarm", icon: <Network size={16} /> },
     { label: "Revenue", icon: <CircleDollarSign size={16} /> },
     { label: "Bank", icon: <Landmark size={16} /> },
+    { label: "SEO Report", icon: <Search size={16} /> },
     { label: "Billing", icon: <CreditCard size={16} /> },
     { label: "Settings", icon: <Settings size={16} /> },
   ];
@@ -626,7 +992,11 @@ export default function Page() {
             {sidebarItems.map(s => (
               <motion.button 
                 key={s.label} 
-                onClick={() => setTab(s.label)}
+                onClick={() => {
+                  if (s.label === "Billing") window.location.href = "/billing";
+                  else if (s.label === "SEO Report") window.location.href = "/seo";
+                  else setTab(s.label);
+                }}
                 whileHover={{ x: 4, backgroundColor: "rgba(99,102,241,0.15)" }}
                 whileTap={{ scale: 0.97 }}
                 className={cx("w-full text-left rounded-xl px-4 py-3 text-xs font-bold flex items-center gap-3 transition-all duration-300 relative group/btn",
@@ -1205,6 +1575,7 @@ export default function Page() {
                        },
                        { 
                          title: "Chrome Extension Factory", roi: "$500–$3k/mo", color: "text-cyan-400", 
+                         apiRoute: "/api/revenue/extension-factory",
                          borderCls: "border-cyan-500/20 hover:border-cyan-500/50",
                          stepCls: "border-cyan-500/30 text-cyan-400/70 bg-cyan-500/5",
                          btnCls: "bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/30",
@@ -1232,6 +1603,7 @@ export default function Page() {
                        },
                        { 
                          title: "Lead Sniper", roi: "$5k–$20k/mo", color: "text-emerald-400", 
+                         apiRoute: "/api/revenue/prospector",
                          borderCls: "border-emerald-500/20 hover:border-emerald-500/50",
                          stepCls: "border-emerald-500/30 text-emerald-400/70 bg-emerald-500/5",
                          btnCls: "bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30",
@@ -1260,6 +1632,7 @@ export default function Page() {
                        },
                        { 
                          title: "Software Arbitrage", roi: "$1.5k–$5k/mo", color: "text-amber-400", 
+                         apiRoute: "/api/revenue/software-arbitrage",
                          borderCls: "border-amber-500/20 hover:border-amber-500/50",
                          stepCls: "border-amber-500/30 text-amber-400/70 bg-amber-500/5",
                          btnCls: "bg-amber-500/10 border border-amber-500/20 text-amber-400 hover:bg-amber-500/30",
@@ -1287,6 +1660,7 @@ export default function Page() {
                        },
                        { 
                          title: "Content Monetization", roi: "$1k–$8k/mo", color: "text-rose-400", 
+                         apiRoute: "/api/revenue/content-monetization",
                          borderCls: "border-rose-500/20 hover:border-rose-500/50",
                          stepCls: "border-rose-500/30 text-rose-400/70 bg-rose-500/5",
                          btnCls: "bg-rose-500/10 border border-rose-500/20 text-rose-400 hover:bg-rose-500/30",
@@ -1315,6 +1689,7 @@ export default function Page() {
                        },
                        { 
                          title: "API Marketplace", roi: "$2k–$15k/mo", color: "text-violet-400", 
+                         apiRoute: "/api/revenue/api-marketplace",
                          borderCls: "border-violet-500/20 hover:border-violet-500/50",
                          stepCls: "border-violet-500/30 text-violet-400/70 bg-violet-500/5",
                          btnCls: "bg-violet-500/10 border border-violet-500/20 text-violet-400 hover:bg-violet-500/30",
@@ -1343,6 +1718,7 @@ export default function Page() {
                        },
                        { 
                          title: "Freelance Autopilot", roi: "$3k–$12k/mo", color: "text-pink-400", 
+                         apiRoute: "/api/revenue/freelance-autopilot",
                          borderCls: "border-pink-500/20 hover:border-pink-500/50",
                          stepCls: "border-pink-500/30 text-pink-400/70 bg-pink-500/5",
                          btnCls: "bg-pink-500/10 border border-pink-500/20 text-pink-400 hover:bg-pink-500/30",
@@ -1371,6 +1747,7 @@ export default function Page() {
                        },
                        { 
                          title: "Digital Products", roi: "$500–$5k/mo", color: "text-orange-400", 
+                         apiRoute: "/api/revenue/digital-products",
                          borderCls: "border-orange-500/20 hover:border-orange-500/50",
                          stepCls: "border-orange-500/30 text-orange-400/70 bg-orange-500/5",
                          btnCls: "bg-orange-500/10 border border-orange-500/20 text-orange-400 hover:bg-orange-500/30",
@@ -1479,10 +1856,21 @@ export default function Page() {
                                onClick={async (e) => { 
                                  e.stopPropagation(); 
                                  toast(`🚀 Launching ${opp.title} — agents spinning up...`, "success");
+                                 
+                                 // ALWAYS create the pipeline in UI
                                  await fetch("/api/openclaw/orchestrator", {
                                    method: "POST", headers: {"Content-Type":"application/json"},
                                    body: JSON.stringify({ action: "LAUNCH_PIPELINE", payload: { title: opp.title, description: opp.desc, steps: opp.steps.map(s => s.text), roi: opp.roi } })
                                  });
+
+                                 if ((opp as any).apiRoute) {
+                                   try {
+                                     await fetch((opp as any).apiRoute, {
+                                       method: "POST", headers: {"Content-Type":"application/json"},
+                                       body: JSON.stringify({ target_niche: "AI Productivity Tools", pricing_model: "Freemium ($15/mo)" })
+                                     });
+                                   } catch(err) { console.error(err); }
+                                 }
                                }}
                                className={cx("flex-1 px-3 py-1.5 rounded-lg text-[9px] font-black uppercase tracking-widest transition-all active:scale-95", opp.btnCls)}
                              >
@@ -1492,12 +1880,26 @@ export default function Page() {
                                onClick={async (e) => { 
                                  e.stopPropagation(); 
                                  toast(`⚡ Auto-launching + executing ${opp.title}...`, "success");
+                                 
+                                 // 1. Create pipeline
                                  const res = await fetch("/api/openclaw/orchestrator", {
                                    method: "POST", headers: {"Content-Type":"application/json"},
                                    body: JSON.stringify({ action: "LAUNCH_PIPELINE", payload: { title: opp.title, description: opp.desc, steps: opp.steps.map(s => s.text), roi: opp.roi } })
                                  });
                                  const data = await res.json();
                                  const pipelineId = data?.memory?.pipelines?.slice(-1)?.[0]?.id;
+
+                                 // 2. Dispatch real agent task if it exists
+                                 if ((opp as any).apiRoute) {
+                                   try {
+                                     await fetch((opp as any).apiRoute, {
+                                       method: "POST", headers: {"Content-Type":"application/json"},
+                                       body: JSON.stringify({ target_niche: "AI B2B Leads", pricing_model: "Subscription ($49/mo)" })
+                                     });
+                                   } catch(err) { console.error(err); }
+                                 }
+
+                                 // 3. Auto execute in UI mock
                                  if (pipelineId) {
                                    await fetch("/api/openclaw/agents", {
                                      method: "POST", headers: {"Content-Type":"application/json"},
