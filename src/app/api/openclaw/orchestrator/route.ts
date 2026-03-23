@@ -68,6 +68,18 @@ export async function POST(req: NextRequest) {
       });
     } else if (action === 'CLEAR_LOGS') {
       memory.logs = [];
+    } else if (action === 'RESET_AGENTS') {
+      // Reset all agent statuses back to idle
+      const swarmAgents = ['architect', 'builder', 'qa', 'hunter', 'copywriter'];
+      if (!memory.agentStatus) memory.agentStatus = {};
+      for (const agent of swarmAgents) {
+        memory.agentStatus[agent] = 'idle';
+      }
+      memory.logs.push({
+        timestamp: new Date().toISOString(),
+        agent: 'admin',
+        message: '🔄 All agents reset to IDLE — Swarm standing by'
+      });
     } else if (action === 'LAUNCH_PIPELINE') {
       const pipelineId = `pipeline-${Date.now()}`;
       const pipelineName = payload.title || 'Unnamed Pipeline';

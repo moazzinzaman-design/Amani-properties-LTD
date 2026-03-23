@@ -623,6 +623,7 @@ export default function Page() {
   }>({ tasks: [], leads: [], logs: [], agentStatus: {}, settings: { isPaused: false, manualApproval: true } });
   
   const termRef = useRef<HTMLDivElement>(null);
+  const swarmLogsRef = useRef<HTMLDivElement>(null);
 
   /* Toast helper */
   const toast = useCallback((msg: string, level: LogLevel = "success") => {
@@ -772,6 +773,8 @@ export default function Page() {
 
   /* Auto-scroll terminal */
   useEffect(() => { termRef.current?.scrollTo(0, termRef.current.scrollHeight); }, [termLog]);
+  /* Auto-scroll war room logs */
+  useEffect(() => { swarmLogsRef.current?.scrollTo(0, swarmLogsRef.current.scrollHeight); }, [swarmState.logs]);
 
   const progress = Math.round((todos.filter(t => t.done).length / Math.max(1, todos.length)) * 100);
   const mm = String(Math.floor(pomodoroSeconds / 60)).padStart(2, "0");
@@ -1414,7 +1417,7 @@ export default function Page() {
                   {/* CENTER: Logs & Actions */}
                   <div className="space-y-4">
                     <GlassCard title="War Room Logs" icon={<Terminal size={16} />} glowColor="rgba(99,102,241,0.1)">
-                      <div className="h-[380px] overflow-auto rounded-lg bg-black/40 p-4 text-[11px] font-mono space-y-2">
+                      <div ref={swarmLogsRef} className="h-[380px] overflow-auto rounded-lg bg-black/40 p-4 text-[11px] font-mono space-y-2">
                         {swarmState.logs.length === 0 && <span className="text-slate-600 animate-pulse italic">Awaiting tactical data streams...</span>}
                         {swarmState.logs.map((log, i) => (
                           <div key={i} className="flex items-start gap-4 group/log">
@@ -1461,6 +1464,7 @@ export default function Page() {
                                 body: JSON.stringify({action:"TOGGLE_PAUSE"}) 
                               });
                               toast(swarmState.settings?.isPaused ? "Swarm Resumed" : "Swarm Paused");
+                              fetchSwarmData();
                             }} className={cx(
                               "rounded-lg border p-2 transition-all flex flex-col items-center gap-1",
                               swarmState.settings?.isPaused ? "bg-emerald-500/10 border-emerald-500/20 hover:bg-emerald-500/20 text-emerald-400" : "bg-rose-500/10 border-rose-500/20 hover:bg-rose-500/20 text-rose-400"
@@ -1477,9 +1481,21 @@ export default function Page() {
                                   body: JSON.stringify({action:"ADD_TASK", payload:{description:desc}}) 
                                 });
                                 toast("Task injected!");
+                                fetchSwarmData();
                               }
                             }} className="rounded-lg bg-indigo-500/10 border border-indigo-400/20 p-2 hover:bg-indigo-500/20 text-indigo-400 transition-all flex flex-col items-center gap-1">
                                <Plus size={14} /> <span className="text-[9px] font-black uppercase">Inject</span>
+                            </button>
+                            <button onClick={async () => {
+                              await fetch("/api/openclaw/orchestrator", {
+                                method: "POST",
+                                headers: {"Content-Type":"application/json"},
+                                body: JSON.stringify({action:"RESET_AGENTS"})
+                              });
+                              toast("All agents reset to IDLE", "info");
+                              fetchSwarmData();
+                            }} className="col-span-2 rounded-lg bg-amber-500/10 border border-amber-500/20 p-2 hover:bg-amber-500/20 text-amber-400 transition-all flex flex-col items-center gap-1">
+                               <RefreshCw size={14} /> <span className="text-[9px] font-black uppercase">Reset Agents</span>
                             </button>
                           </div>
                        </GlassCard>
