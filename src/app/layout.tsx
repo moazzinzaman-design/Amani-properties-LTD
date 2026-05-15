@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mission Control",
+  title: "Summit Forge AI",
   description: "Revenue Engine — 24/7 OpenClaw-ready operations center",
 };
 

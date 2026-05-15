@@ -5,13 +5,13 @@ import path from 'path';
 
 export async function GET() {
   try {
-    const targetDir = path.join(process.env.HOME || '/Users/moazzinzaman', 'Desktop', 'CODING AI');
+    const targetDir = '/Users/moazzinzaman/Desktop/CODING AI';
     
     // Check if directory exists
     try {
       await fs.access(targetDir);
     } catch {
-      return NextResponse.json({ success: false, error: 'Directory not found', projects: [] });
+      return NextResponse.json({ success: false, error: 'Directory not found at ' + targetDir, projects: [] });
     }
 
     const items = await fs.readdir(targetDir, { withFileTypes: true });
@@ -45,9 +45,21 @@ export async function GET() {
       const statuses = ['ONLINE', 'BUILDING', 'READY', 'OFFLINE', 'SYNCING'];
       const status = statuses[Math.floor(Math.random() * statuses.length)];
 
+      // Parse Category from Name (e.g., [APPS] Something -> Category: APPS, Name: Something)
+      let category = 'Other';
+      let cleanName = folder.name;
+      const match = folder.name.match(/^\[(.*?)\]\s*(.*)$/);
+      if (match) {
+        category = match[1].toUpperCase();
+        cleanName = match[2];
+        if (category === 'BIZ') category = 'BUSINESS';
+      }
+
       return {
         id: Buffer.from(folder.name).toString('base64'),
-        name: folder.name,
+        name: cleanName,
+        originalName: folder.name,
+        category,
         path: fullPath,
         lastModified: stats.mtime,
         size: stats.size, // in bytes

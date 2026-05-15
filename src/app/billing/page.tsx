@@ -1,78 +1,51 @@
 'use client';
 
-import { useState } from 'react';
-import { CreditCard, ShieldCheck } from 'lucide-react';
+import { ShieldCheck, Rocket } from 'lucide-react';
+import Link from 'next/link';
 
 export default function BillingPage() {
-  const [loading, setLoading] = useState<string | null>(null);
-
-  const handleCheckout = async (plan: 'pro' | 'enterprise') => {
-    setLoading(plan);
-    try {
-      const res = await fetch('/api/stripe/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ plan, email: 'demo@amani-properties.com' })
-      });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        alert(data.message || 'Checkout failed');
-      }
-    } catch (err) {
-      console.error(err);
-      alert('An error occurred during checkout.');
-    } finally {
-      setLoading(null);
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-black text-white p-8">
-      <div className="max-w-4xl mx-auto mt-12">
-        <h1 className="text-4xl font-bold mb-4 font-mono text-cyan-400">Mission Control Subscriptions</h1>
-        <p className="text-gray-400 mb-12">Upgrade to unlock the full potential of your 10-Agent Swarm.</p>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Pro Tier */}
-          <div className="border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-8 hover:border-cyan-500/50 transition-colors">
-            <h2 className="text-2xl font-bold mb-2">Pro Tier</h2>
-            <div className="text-4xl font-bold mb-6">£29<span className="text-xl text-gray-500 font-normal">/mo</span></div>
-            <ul className="space-y-4 mb-8 text-gray-300">
-              <li className="flex items-center gap-2"><ShieldCheck className="text-cyan-400 w-5 h-5"/> Access to 5 Core Agents</li>
-              <li className="flex items-center gap-2"><ShieldCheck className="text-cyan-400 w-5 h-5"/> 100 Automated Tasks / month</li>
-              <li className="flex items-center gap-2"><ShieldCheck className="text-cyan-400 w-5 h-5"/> Basic Analytics reporting</li>
-            </ul>
-            <button 
-              onClick={() => handleCheckout('pro')}
-              disabled={loading !== null}
-              className="w-full py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-lg flex justify-center items-center gap-2 disabled:opacity-50"
-            >
-              {loading === 'pro' ? 'Loading...' : <><CreditCard className="w-5 h-5" /> Subscribe to Pro</>}
-            </button>
-          </div>
-
-          {/* Enterprise Tier */}
-          <div className="border border-purple-500/30 bg-purple-900/10 backdrop-blur-md rounded-2xl p-8 relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-purple-500text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMMENDED</div>
-            <h2 className="text-2xl font-bold mb-2 text-purple-400">Enterprise Swarm</h2>
-            <div className="text-4xl font-bold mb-6">£99<span className="text-xl text-gray-500 font-normal">/mo</span></div>
-            <ul className="space-y-4 mb-8 text-gray-300">
-              <li className="flex items-center gap-2"><ShieldCheck className="text-purple-400 w-5 h-5"/> Full 10-Agent Swarm Access</li>
-              <li className="flex items-center gap-2"><ShieldCheck className="text-purple-400 w-5 h-5"/> Unlimited Automated Tasks</li>
-              <li className="flex items-center gap-2"><ShieldCheck className="text-purple-400 w-5 h-5"/> Custom Subagent Blueprints</li>
-              <li className="flex items-center gap-2"><ShieldCheck className="text-purple-400 w-5 h-5"/> Priority Support Engine</li>
-            </ul>
-            <button 
-              onClick={() => handleCheckout('enterprise')}
-              disabled={loading !== null}
-              className="w-full py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-lg flex justify-center items-center gap-2 disabled:opacity-50"
-            >
-              {loading === 'enterprise' ? 'Loading...' : <><CreditCard className="w-5 h-5" /> Deploy Enterprise Swarm</>}
-            </button>
+    <div className="min-h-screen bg-black text-white p-8 flex flex-col items-center justify-center">
+      <div className="max-w-2xl mx-auto text-center">
+        <div className="mb-8 flex justify-center">
+          <div className="p-4 bg-purple-900/20 border border-purple-500/50 rounded-full">
+            <ShieldCheck className="w-16 h-16 text-purple-400" />
           </div>
         </div>
+        
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 font-mono text-purple-400">
+          Enterprise Swarm Unlocked
+        </h1>
+        
+        <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+          Premium subscription requirements have been removed. You now have full, unrestricted access to the complete 10-Agent Enterprise Swarm architecture.
+        </p>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12 text-left max-w-lg mx-auto">
+          <div className="bg-white/5 border border-white/10 p-4 rounded-xl flex items-center gap-3">
+             <Rocket className="text-emerald-400 w-5 h-5" />
+             <span className="text-sm font-bold text-gray-200">Unlimited Automated Tasks</span>
+          </div>
+          <div className="bg-white/5 border border-white/10 p-4 rounded-xl flex items-center gap-3">
+             <Rocket className="text-emerald-400 w-5 h-5" />
+             <span className="text-sm font-bold text-gray-200">Custom Subagent Blueprints</span>
+          </div>
+          <div className="bg-white/5 border border-white/10 p-4 rounded-xl flex items-center gap-3">
+             <Rocket className="text-emerald-400 w-5 h-5" />
+             <span className="text-sm font-bold text-gray-200">Full Agent Orchestration</span>
+          </div>
+          <div className="bg-white/5 border border-white/10 p-4 rounded-xl flex items-center gap-3">
+             <Rocket className="text-emerald-400 w-5 h-5" />
+             <span className="text-sm font-bold text-gray-200">Zero Monthly Overhead</span>
+          </div>
+        </div>
+
+        <Link 
+          href="/"
+          className="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-xl transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(168,85,247,0.3)]"
+        >
+          Return to Mission Control
+        </Link>
       </div>
     </div>
   );

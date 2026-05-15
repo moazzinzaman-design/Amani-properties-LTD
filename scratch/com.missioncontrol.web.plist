@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.missioncontrol.web</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/npm</string>
+        <string>run</string>
+        <string>dev</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/moazzinzaman/mission-control</string>
+    <key>StandardOutPath</key>
+    <string>/Users/moazzinzaman/mission-control/web-out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/moazzinzaman/mission-control/web-err.log</string>
+    <key>KeepAlive</key>
+    <true/>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin</string>
+        <key>PORT</key>
+        <string>3000</string>
+    </dict>
+</dict>
+</plist>

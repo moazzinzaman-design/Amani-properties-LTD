@@ -20,6 +20,12 @@ export async function POST(req: Request) {
     let cmdArgs: string[] = [];
 
     switch (action) {
+      case 'terminal_open':
+      case 'open_folder':
+        command = 'bash';
+        // Try opening in VS Code, fallback to Finder
+        cmdArgs = ['-c', `code "${projectPath}" || open "${projectPath}"`];
+        break;
       case 'git_pull':
         command = 'git';
         cmdArgs = ['pull'];
